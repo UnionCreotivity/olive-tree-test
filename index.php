@@ -1,0 +1,584 @@
+<?php 
+//-- 共用連結 --
+require 'share_area/conn.php';
+?>
+
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>橄欖樹廣告</title>
+
+    <title><?php echo $company['name'];?></title>
+    <!-- FACEBOOK 分享資訊 -->
+    <meta property="og:title" content="<?php echo $company['name'];?>" />
+    <meta property="og:description" content="<?php echo $company['description'];?>" />
+    <meta property="og:url" content="<?php echo NOW_HOST;?>" />
+    <meta itemprop="image" property="og:image" content="<?php echo NOW_HOST.'img/share.jpg';?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="<?php echo $company['name'];?>" />
+    <meta itemprop="name" content="<?php echo $company['name'];?>" />
+    <meta itemprop="description" content="<?php echo $company['description'];?>" />
+    <meta name="description" content="<?php echo $company['description'];?>" />
+    <meta name="keywords" content="<?php echo $company['keywords'];?>" />
+    <!-- 標準網址 -->
+    <link rel="canonical" href="<?php echo NOW_HOST;?>" />
+
+    <link rel="preload" href="assets/images/three_img/olive-tree_s.jpg" as="image"  />
+    <link rel="preload" href="assets/images/three_img/olive-tree_e.jpg" as="image"  />
+    <link rel="preload" href="assets/images/three_img/ph/olive-tree_s.jpg" as="image"  />
+    <link rel="preload" href="assets/images/three_img/ph/olive-tree_e.jpg" as="image"  />
+
+    <link rel="preload" href="assets/images/three_img/campanula_s.jpg" as="image"  />
+    <link rel="preload" href="assets/images/three_img/campanula_e.jpg" as="image"  />
+    <link rel="preload" href="assets/images/three_img/ph/campanula_s.jpg" as="image"  />
+    <link rel="preload" href="assets/images/three_img/ph/campanula_e.jpg" as="image"  />
+
+    <link rel="preload" href="assets/images/three_img/cotton_s.jpg" as="image"  />
+    <link rel="preload" href="assets/images/three_img/cotton_e.jpg" as="image"  />
+    <link rel="preload" href="assets/images/three_img/ph/cotton_s.jpg" as="image"  />
+    <link rel="preload" href="assets/images/three_img/ph/cotton_e.jpg" as="image"  />
+
+    <link rel="preload" href="assets/images/three_img/lily_s.jpg" as="image"  />
+    <link rel="preload" href="assets/images/three_img/lily_e.jpg" as="image"  />
+    <link rel="preload" href="assets/images/three_img/ph/lily_s.jpg" as="image"  />
+    <link rel="preload" href="assets/images/three_img/ph/lily_e.jpg" as="image"  />
+
+    <?php 
+        //-- 共用CSS --
+        require 'share_area/css.php';
+    ?>
+
+</head>
+
+<body>
+
+
+    <div data-barba="wrapper">
+        <div class="contanier" data-barba="container" data-barba-namespace="index">
+
+        <!-- loading -->
+        <div class="loading-page">
+            <div class="box">
+                <div class="box-para">
+                <div class="loading-progress">0</div>
+                <span>%</span>
+                </div>
+            </div>
+        </div>
+
+            <div class="index-body">
+                <?php
+                  $appActive=$pdo->select("SELECT BtnTitle FROM appActive LIMIT 0,1", 'no', 'one');
+                ?>
+                <div class="news-item">
+                    <a href="activity.php">
+                        <div class="news-title">
+                            <?php echo nl2br($appActive['BtnTitle']);?>
+                        </div>
+                        <div class="more">
+                            more
+                        </div>
+                    </a>
+                </div>
+
+                <div class="news-item-moblie">
+                    <a href="activity.php">
+                        <div class="news-title-fixed">
+                            News
+                        </div>
+
+                        <div class="news-title">
+                            <?php echo nl2br($appActive['BtnTitle']);?>
+                        </div>
+                        <div class="more">
+                            more
+                        </div>
+                    </a>
+                </div>
+                <div class="light-video">
+                    <video src="assets/video/bg.mp4" loop autoplay muted playsinline></video>
+                </div>
+
+                <div class="movie_box">
+                    <video src="assets/images/openMv.mp4" poster="assets/images/openMvImg.jpg" autoplay muted
+                        playsinline></video>
+                    <div class="skip_div">
+                        <a href="javascript:;" class="skip_btn">SKIP</a>
+                    </div>
+                </div>
+
+                <!-- <div class="light-video">
+                        <video src="assets/images/lightMV3.mp4" poster="assets/images/openMvImg.jpg" autoplay muted loop playsinline></video>
+                    </div> -->
+
+                <!-- bg shadow-->
+                <div id="scene-tree-shadow" class="tree-shadow" data-relative-input="true">
+                    <img class="tree_shadow" src="assets/images/tree_shadow.webp" alt="tree_shadow" srcset="">
+                </div>
+
+                <!-- bg shadow-->
+                <div id="scene-bg-shadow" class="bg-shadow" data-relative-input="true">
+                    <picture>
+                        <source srcset="assets/images/light_shadow.webp" media="(max-width: 1024px)">
+                        <img class="light_shadow" src="assets/images/light_shadowNEW.webp" alt="light_shadow" srcset="">
+                    </picture>
+                </div>
+
+                <!-- main -->
+                <div class="scroll-card-box">
+
+                    <div class='card-box olive-tree-box' id="olive-tree" data-ph-num="0" data-href="about.php">
+                        <div class='card'>
+                            <div class="font">
+                                <div class="item-img">
+                                    <img class="test-olive" src="assets/images/tree.png" alt="tree" srcset="">
+                                    <div class="tree-component1">
+                                        <img src="assets/images/tree_component/tree_component1.png" alt="tree_component1"
+                                            srcset="">
+                                    </div>
+                                    <div class="tree-component2">
+                                        <img src="assets/images/tree_component/tree_component2.png" alt="tree_component2"
+                                            srcset="">
+                                    </div>
+                                    <div class="tree-component3">
+                                        <img src="assets/images/tree_component/tree_component3.png" alt="tree_component3"
+                                            srcset="">
+                                    </div>
+                                    <div class="tree-component4">
+                                        <img src="assets/images/tree_component/tree_component4.png" alt="tree_component4"
+                                            srcset="">
+                                    </div>
+                                    <div class="tree-component5">
+                                        <img src="assets/images/tree_component/tree_component5.png" alt="tree_component5"
+                                            srcset="">
+                                    </div>
+                                    <div class="tree-component6">
+                                        <img src="assets/images/tree_component/tree_component6.png" alt="tree_component6"
+                                            srcset="">
+                                    </div>
+                                    <div class="tree-component7">
+                                        <img src="assets/images/tree_component/tree_component7.png" alt="tree_component7"
+                                            srcset="">
+                                    </div>
+                                    <div class="tree-component-light8">
+                                        <img src="assets/images/tree_component/tree_light.png" alt="tree_light"
+                                            srcset="">
+                                    </div>
+                                    <div class="tree-component-light9">
+                                        <img src="assets/images/tree_component/tree_light.png" alt="tree_light"
+                                            srcset="">
+                                    </div>
+                                    <div class="tree-component-light10">
+                                        <img src="assets/images/tree_component/tree_light.png" alt="tree_light"
+                                            srcset="">
+                                    </div>
+                                    <div class="tree-component-light11">
+                                        <img src="assets/images/tree_component/tree_light.png" alt="tree_light"
+                                            srcset="">
+                                    </div>
+                                    <div class="tree-component-light12">
+                                        <img src="assets/images/tree_component/tree_light.png" alt="tree_light"
+                                            srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back back-color">
+                                <div class="back-content">
+                                    <div class="item-img back-item-img">
+                                        <img src="assets/images/tree_complete.svg" alt="tree_complete" srcset="">
+                                    </div>
+                                    <div class="text-content">
+                                        <div class="title">
+                                            <h2>OLIVE TREE</h2>
+                                            橄欖樹
+                                        </div>
+                                        <div class="subTitle">橄欖樹象徵生命力</div>
+                                        <div class="content">
+                                            全面行銷策略<br>
+                                            伴客戶走過四季美景<br>
+                                            完美達成理想目標<br>
+                                        </div>
+                                        <div class="cardFooter"><span class="cardLine"></span><span class="cardText">OLIVE
+                                                TREE</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="envelope">
+                            <img src="assets/images/envelope.svg" alt="envelope" srcset="">
+                            <div class="envelope-text-svg">
+                                <img src="assets/images/env_olivetree.svg" alt="env_olivetree" srcset="">
+                            </div>
+                        </div>
+                        <div class="card-shadow">
+                            <img src="assets/images/card_shadow.png" alt="card_shadow" srcset="">
+                        </div>
+                        <div class="card-page-name-box">
+                            <div class="icon">
+                                <img src="assets/images/title_icon.svg" alt="title_icon" srcset="">
+                            </div>
+                            <div class="page-name">
+                                關於橄欖樹
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='card-box lily-box' id="lily" data-ph-num="0" data-href="case.php">
+                        <div class='card'>
+                            <div class="font">
+                                <div class="item-img">
+                                    <img src="assets/images/lily.png" alt="lily" srcset="">
+                                    <div class="lily-component1">
+                                        <img src="assets/images/lily_component/lily_component1.png" alt="lily_component1"
+                                            srcset="">
+                                    </div>
+                                    <div class="lily-component2">
+                                        <img src="assets/images/lily_component/lily_component2.png" alt="lily_component2"
+                                            srcset="">
+                                    </div>
+                                    <div class="lily-component3">
+                                        <img src="assets/images/lily_component/lily_component3.png" alt="lily_component3"
+                                            srcset="">
+                                    </div>
+                                    <div class="lily-component4">
+                                        <img src="assets/images/lily_component/lily_component4.png" alt="lily_component4"
+                                            srcset="">
+                                    </div>
+                                    <div class="lily-component5">
+                                        <img src="assets/images/lily_component/lily_component5.png" alt="lily_component5"
+                                            srcset="">
+                                    </div>
+                                    <div class="lily-component6">
+                                        <img src="assets/images/lily_component/lily_component6.png" alt="lily_component6"
+                                            srcset="">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="back back-color">
+                                <!-- <div class="blur-2">
+                                    <img src="assets/images/blur_2.png" alt="blur_2" srcset="">
+                                </div>
+                                <div class="blur-1">
+                                    <img src="assets/images/blur_1.png" alt="blur_1" srcset="">
+                                </div>
+                                <div class="blur">
+                                    <img src="assets/images/blur_all.png" alt="" srcset="">
+                                </div> -->
+                                <div class="back-content">
+                                    <div class="item-img back-item-img">
+                                        <img src="assets/images/lily_complete.svg" alt="lily_complete" srcset="">
+                                    </div>
+                                    <!-- <div class="lily-case-bg-box marquee-box">
+                                        <div class="lily-case-bg">
+                                            <img src="src/assets/images/case.png" alt="" srcset="">
+                                            <img src="src/assets/images/case.png" alt="" srcset="">
+                                            <img src="src/assets/images/case.png" alt="" srcset="">
+                                        </div>
+                                    </div> -->
+                                    <div class="text-content">
+                                        <div class="title">
+                                            <h2>LILY</h2>
+                                            百合花
+                                        </div>
+                                        <div class="subTitle">百合花綻放祝福</div>
+                                        <div class="content">
+                                            攜手創造雙贏<br>
+                                            致力於建築銷售服務<br>
+                                            追尋恣意生活<br>
+                                        </div>
+                                        <div class="cardFooter"><span class="cardLine"></span><span
+                                                class="cardText">CASE</span></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="envelope">
+                            <img src="assets/images/envelope.svg" alt="" srcset="">
+                            <div class="envelope-text-svg">
+                                <img src="assets/images/env_case.svg" alt="env_case" srcset="">
+                            </div>
+                        </div>
+                        <div class="card-shadow">
+                            <img src="assets/images/card_shadow.png" alt="card_shadow" srcset="">
+                        </div>
+                        <div class="card-page-name-box">
+                            <div class="icon">
+                                <img src="assets/images/title_icon.svg" alt="title_icon" srcset="">
+                            </div>
+                            <div class="page-name">
+                                熱銷建案
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='card-box cotton-box' id="cotton" data-ph-num="0" data-href="history.php">
+                        <div class='card'>
+                            <div class="font">
+                                <div class="item-img">
+                                    <img src="assets/images/cotton_sway2.png" alt="cotton_sway2" srcset="">
+
+                                    <div class="cotton-component3">
+                                        <img src="assets/images/cotton_component/cotton-component3.png"
+                                            alt="cotton-component3" srcset="">
+                                    </div>
+                                    <div class="cotton-component4">
+                                        <img src="assets/images/cotton_component/cotton-component4.png"
+                                            alt="cotton-component4" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back back-color">
+                                <div class="back-content">
+                                    <div class="item-img back-item-img">
+                                        <img src="assets/images/cotton_complete.svg" alt="cotton_complete" srcset="">
+
+                                    </div>
+                                    <div class="text-content">
+                                        <div class="title">
+                                            <h2>COTTON</h2>
+                                            棉花
+                                        </div>
+                                        <div class="subTitle">棉花代表珍惜</div>
+                                        <div class="content">
+                                            所有努力都綻放花朵，<br>
+                                            收穫豐碩成果，<br>
+                                            留下美好回憶。<br>
+                                        </div>
+                                        <div class="cardFooter"><span class="cardLine"></span><span
+                                                class="cardText">HISTORY</span></div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="envelope">
+                            <img src="assets/images/envelope.svg" alt="" srcset="">
+                            <div class="envelope-text-svg">
+                                <img src="assets/images/env_history.svg" alt="env_history" srcset="">
+                            </div>
+                        </div>
+                        <div class="card-shadow">
+                            <img src="assets/images/card_shadow.png" alt="card_shadow" srcset="">
+                        </div>
+                        <div class="card-page-name-box">
+                            <div class="icon">
+                                <img src="assets/images/title_icon.svg" alt="title_icon" srcset="">
+                            </div>
+                            <div class="page-name">
+                                歷屆業績
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='card-box campanula-box' id="campanula" data-ph-num="0" data-href="news.php">
+                        <div class='card'>
+                            <div class="font">
+                                <div class="item-img">
+                                    <div class="campanula">
+                                        <img src="assets/images/campanula_component/campanula_component5.png"
+                                            alt="campanula_component5" srcset="">
+                                    </div>
+                                    <div class="campanula-component1">
+                                        <img src="assets/images/campanula_component/campanula_component1.png"
+                                            alt="campanula_component1" srcset="">
+                                    </div>
+                                    <div class="campanula-component2">
+                                        <img src="assets/images/campanula_component/campanula_component2.png"
+                                            alt="campanula_component2" srcset="">
+                                    </div>
+                                    <div class="campanula-component3">
+                                        <img src="assets/images/campanula_component/campanula_component3.png"
+                                            alt="campanula_component3" srcset="">
+                                    </div>
+                                    <div class="campanula-component4">
+                                        <img src="assets/images/campanula_component/campanula_component4.png"
+                                            alt="campanula_component4" srcset="">
+                                    </div>
+                                    <div class="campanula-component5">
+                                        <img src="assets/images/campanula_component/campanula_component4.png"
+                                            alt="campanula_component4" srcset="">
+                                    </div>
+
+                                    <div class="campanula-component6">
+                                        <img src="assets/images/campanula_component/campanula_component4.png"
+                                            alt="campanula_component4" srcset="">
+                                    </div>
+                                    <div class="campanula-component7">
+                                        <img src="assets/images/campanula_component/campanula_component4.png"
+                                            alt="campanula_component4" srcset="">
+                                    </div>
+                                    <div class="campanula-component8">
+                                        <img src="assets/images/campanula_component/campanula_component4.png"
+                                            alt="campanula_component4" srcset="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="back back-color">
+                                <div class="back-content">
+                                    <div class="item-img back-item-img">
+                                        <img src="assets/images/campanula_complete.svg" alt="campanula_complete"
+                                            srcset="">
+                                    </div>
+                                    <div class="text-content">
+                                        <div class="title">
+                                            <h2>BLUEBELL</h2>
+                                            風鈴草
+                                        </div>
+                                        <div class="subTitle">搖曳的風鈴草</div>
+                                        <div class="content">
+                                            感謝所有美好事物，<br>
+                                            用心經營客戶關係，<br>
+                                            提供行銷的新選擇。<br>
+                                        </div>
+                                        <div class="cardFooter"><span class="cardLine"></span><span
+                                                class="cardText">NEWS</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="envelope">
+                            <img src="assets/images/envelope.svg" alt="" srcset="">
+                            <div class="envelope-text-svg">
+                                <img src="assets/images/env_news.svg" alt="env_news" srcset="">
+                            </div>
+                        </div>
+                        <div class="card-shadow">
+                            <img src="assets/images/card_shadow.png" alt="card_shadow" srcset="">
+                        </div>
+                        <div class="card-page-name-box">
+                            <div class="icon">
+                                <img src="assets/images/title_icon.svg" alt="title_icon" srcset="">
+                            </div>
+                            <div class="page-name">
+                                最新消息
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="navigation_box" >
+                    <a class="prev_btn" href="javascript:;"><img src="assets/images/arrow_new.svg?1" alt=""></a>
+                    <a class="next_btn" href="javascript:;"><img src="assets/images/arrow_new.svg?1" alt=""></a>
+                </div>
+
+                <!-- <div class="cardInner mask_div mask_c">
+
+                    <div class="leaf1"></div>
+                    <div class="leaf2"></div>
+                    <div class="leaf3"></div>
+                    <div class="leaf4"></div>
+                    <div class="leaf5"></div>
+
+                    <div class="card">
+                        <div class="bulge">
+                            <div id="slider" data-images=''>
+                            </div>
+                        </div>
+                        <div class="back">
+
+                            <div class="back-content">
+
+                                <img class="back-item-img" src="assets/images/SVG/tree_svg.svg" alt="" srcset="">
+
+                                <div class="chapter-title">
+                                    <img class="chapter-title-img" src="assets/images/olivetree_text.png"
+                                        alt="olivetree_text" srcset="">
+                                </div>
+                                <div class="lily-case-bg-box marquee-box">
+                                    <div class="lily-case-bg ">
+                                        <img src="assets/images/case_txt.png" alt="" srcset="">
+                                        <img src="assets/images/case_txt.png" alt="" srcset="">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blur-1">
+                        <img class="blur-img1" src="assets/images/tree_blur_1.png" alt="tree_blur_1" srcset="">
+                    </div>
+                    <div class="blur-2">
+                        <img class="blur-img2" src="assets/images/tree_blur_2.png" alt="tree_blur_2" srcset="">
+                    </div>
+                    <div class="blur-3">
+                        <img class="blur-img3" src="assets/images/lily_bg.jpg" alt="tree_blur_3_2" srcset="">
+                    </div>
+
+                </div> -->
+
+                <!-- <div class="line">
+                    <img src="assets/images/header/line.png" alt="line" srcset="">
+                </div> -->
+                <div class="page-footer-info-moblie" id="index-footer">
+                    <div class="copy-right">Copyright © 2023<?php echo $company['name']?> 版權所有</div>
+                    <div class="address">地址 ｜ <?php echo str_replace(',' ,'', $company['adds'])?></div>
+                    <div class="phone">TEL | <?php echo $company['phone']?></div>
+                    <div class="footer-icon footer-fb-box">
+                        <a href="<?php echo $company['fb_url']?>" target="_blank">
+                            <img src="assets/images/header/footer_fb.png" alt="footer_fb" srcset="">
+                        </a>
+                    </div>
+                    <div class="footer-icon footer-yt-box">
+                        <a href="<?php echo $company['yt_url']?>" target="_blank">
+                           <img src="assets/images/header/footer_yt.png" alt="footer_yt" srcset="">
+                        </a>
+                    </div>
+                    <div class="footer-icon footer-line-box">
+                        <a href="<?php echo $company['line_url']?>" target="_blank">
+                            <img src="assets/images/header/footer_line.png" alt="footer_line" srcset="">
+                        </a>
+                        
+                    </div>
+                    <div class="footer-icon footer-email-box">
+                      <a href="contact.php" >
+                         <img src="assets/images/header/footer_email.png" alt="footer_email" srcset="">
+                      </a>
+                    </div>
+                    <!-- <div class="footer-icon footer-fb-box">
+                        <img src="assets/images/header/footer_fb.png" alt="footer_fb" srcset="">
+                    </div>
+                    <div class="footer-icon footer-yt-box">
+                        <img src="assets/images/header/footer_yt.png" alt="footer_yt" srcset="">
+                    </div>
+                    <div class="footer-icon footer-line-box">
+                        <img src="assets/images/header/footer_line.png" alt="footer_line" srcset="">
+                    </div>
+                    <div class="footer-icon footer-email-box">
+                        <img src="assets/images/header/footer_email.png" alt="footer_email" srcset="">
+                    </div> -->
+                </div>
+            </div>
+
+            <?php
+            //-- 共用cardInner --
+            require 'share_area/transitions.php';
+            ?>
+        </div>
+
+
+        
+    </div>
+
+
+    
+
+    <?php 
+        //-- 共用JS --
+        require 'share_area/js.php';
+    ?>
+
+    
+
+    <!-- <script src="../js/case.js" async></script> -->
+</body>
+
+</html>

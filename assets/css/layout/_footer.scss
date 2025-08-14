@@ -1,0 +1,259 @@
+.footer-info {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    z-index: 10;
+    color: #808080;
+    text-align: center;
+    font-family: 'Noto Serif TC', serif;
+    align-self: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 12pt;
+    padding-bottom: 0.6vw;
+
+    @media all and (max-width:1440px) {
+        font-size: 0.8vw;
+    }
+
+    @media all and (max-width:1024px) {
+        font-size: 2.3vw;
+        padding-bottom: 3.5vw;
+    }
+
+    @media all and (max-width:500px) {
+        padding-bottom: 5vw;
+        font-size: 12px;
+    }
+
+    .copy-right {
+        margin-right: 1.5vw;
+        letter-spacing: 0.1em;
+    }
+
+    .address {
+        margin-right: 1.5vw;
+        letter-spacing: 0.1em;
+
+        @media all and (max-width:1024px) {
+            display: none;
+        }
+    }
+
+    .phone {
+        margin-right: 1.5vw;
+        letter-spacing: 0.1em;
+
+        @media all and (max-width:1024px) {
+            display: none;
+        }
+    }
+
+    .footer-icon {
+        display: flex;
+        width: 100%;
+        margin-right: 1vw;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .email-box {
+        display: block;
+        cursor: pointer;
+
+        @media all and (max-width:1024px) {
+            display: none;
+        }
+
+        img {
+            display: block;
+            width: 40px;
+        }
+    }
+}
+
+.line {
+    position: fixed;
+    right: 2vw;
+    bottom: 3vw;
+    cursor: pointer;
+    z-index: 99;
+
+    @media all and (max-width:1024px) {
+        right: 7vw;
+        bottom: 10vw;
+    }
+
+    img {
+        width: 2.7vw;
+        min-width: 55px;
+
+        @media all and (max-width:1024px) {
+            width: 7vw;
+        }
+    }
+}
+
+.page-footer-info-moblie {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    z-index: 10;
+    background-color: #7f7f7f;
+    color: #fff;
+    text-align: center;
+    font-family: 'Noto Serif TC';
+    align-self: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.6vw;
+    padding-top: 0.6vw;
+    @include fontSize12pt();
+
+    @media all and (max-width:1920px) {
+        font-size: 13px;
+    }
+
+    @media all and (max-width:1440px) {
+        font-size: 0.8vw;
+        // padding-bottom: 1vw;
+        // padding-top: 1vw;
+    }
+
+    @media all and (max-width:1024px) {
+        font-size: 2.3vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        line-height: 4vw;
+        flex-direction: column;
+    }
+
+    @media all and (max-width:500px) {
+        font-size: 12px;
+        padding-top: 5vw;
+        line-height: 5.5vw;
+        padding-bottom: 4vw;
+    }
+
+    @media all and (max-width:393px) {
+        font-size: 11px;
+    }
+
+    @media all and (max-width:320px) {
+        font-size: 10px;
+    }
+
+    .copy-right {
+        margin-right: 1.5vw;
+        letter-spacing: 0.2em;
+
+        @media all and (max-width:1024px) {
+            order: 3;
+        }
+    }
+
+    .address {
+        margin-right: 1.5vw;
+        letter-spacing: 0.2em;
+
+        @media all and (max-width:1024px) {
+            order: 2;
+        }
+    }
+
+    .phone {
+        margin-right: 1.5vw;
+        letter-spacing: 0.12em;
+        color: #fff;
+
+        @media all and (max-width:1024px) {
+            order: 1;
+        }
+
+        a {
+            color: #fff;
+        }
+    }
+
+    .footer-icon-box {
+        display: flex;
+
+        @media all and (max-width:1024px) {
+
+            order: 4;
+            margin-top: 2vw;
+        }
+    }
+
+    .footer-icon {
+        display: flex;
+        margin-right: 0.5vw;
+        cursor: pointer;
+
+
+
+        @media all and (max-width:1024px) {
+            margin-right: 2vw;
+        }
+
+        @media all and (max-width:500px) {
+            margin-right: 2.5vw;
+        }
+
+        @media all and (max-width:375px) {
+            margin-right: 3vw;
+        }
+
+        img {
+            width: 1.3vw;
+
+            @media all and (max-width:1920px) {
+                width: 1.35vw;
+            }
+
+            @media all and (max-width:1440px) {
+                width: 1.4vw;
+            }
+
+            @media all and (max-width:1024px) {
+                width: 5vw;
+            }
+
+            @media all and (max-width:500px) {
+                width: 6.5vw;
+            }
+
+            @media all and (max-width:375px) {
+                width: 8vw;
+            }
+
+            @media all and (max-width:320px) {
+                width: 9vw;
+            }
+        }
+    }
+
+    .email-box {
+        display: block;
+        cursor: pointer;
+
+        @media all and (max-width:1024px) {
+            display: none;
+        }
+
+        img {
+            display: block;
+            width: 40px;
+        }
+    }
+}
+
+#index-footer {
+
+    background: none;
+    color: #808080;
+}

@@ -1,0 +1,307 @@
+.about-insidepage-body {
+    background-image: url(../images/page_about/about_inside_bg.png);
+    width: 100%;
+    background-size: cover;
+    position: relative;
+
+    .about-insidepage-container {
+        width: 100%;
+        padding-bottom: 10vw;
+        padding-top: 6vw;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+
+
+        .tree-bg {
+            position: absolute;
+            right: -2vw;
+            top: 25vw;
+
+            @media all and (max-width:1024px) {
+                top: 123vw;
+                right: -4vw;
+            }
+
+            @media all and (max-width:1024px) {
+                width: 50%;
+
+            }
+
+            img {
+                width: 108%;
+
+            }
+        }
+
+        @media all and (max-width:1024px) {
+            padding-top: 27vw;
+            padding-left: 7vw;
+            padding-right: 7vw;
+            padding-bottom: 45vw;
+        }
+
+        @media all and (max-width:500px) {
+            padding-bottom: 50vw;
+        }
+
+
+        .content-box {
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding: 2.5vw 4vw 0vw 4vw;
+
+            @media all and (max-width:1024px) {
+                width: 100%;
+                padding: 0vw 0vw 0vw 0vw;
+            }
+
+            .title-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 auto;
+
+
+                .title-img {
+
+                    margin: 0 auto;
+                    text-align: center;
+
+                    @media all and (max-width:1440px) {
+                        width: initial;
+                    }
+
+                    img {
+                        height: 3vw;
+
+                        @media all and (max-width:1440px) {
+                            height: 4vw;
+                        }
+
+                        @media all and (max-width:1024px) {
+                            height: 11vw;
+                        }
+                    }
+                }
+            }
+
+            .title {
+                font-family: 'Noto Serif TC', serif;
+                color: #000000;
+                letter-spacing: 0.1em;
+                font-size: 1vw;
+                text-align: center;
+
+                @media all and (max-width:1440px) {
+                    font-size: 1.2vw;
+                }
+
+                @media all and (max-width:1024px) {
+                    font-size: $sub-title;
+                }
+            }
+
+            .title-line {
+                margin-top: 0.3vw;
+
+                img {
+                    width: 10vw;
+
+                    @media all and (max-width:1440px) {
+                        width: 14vw;
+                    }
+                }
+
+                .title-line-pc {
+                    @media all and (max-width:1024px) {
+                        display: none;
+                    }
+                }
+
+                .title-line-moblie {
+                    display: none;
+
+                    @media all and (max-width:1024px) {
+                        display: block;
+                        margin-top: 4vw;
+                        margin-bottom: 4vw;
+                        width: 60vw;
+                    }
+                }
+            }
+
+            .content {
+                margin-top: 0.5vw;
+                text-align: justify;
+                margin-top: 1vw;
+                line-height: 1.5vw;
+                font-family: '微軟正黑體';
+                letter-spacing: 0.1em;
+                color: #000000;
+                @include fontSize16pt();
+                z-index: 20;
+
+                @media all and (max-width:1440px) {
+                    line-height: 1.8vw;
+                }
+
+                @media all and (max-width:1024px) {
+                    font-size: $content;
+                    line-height: 7vw;
+                }
+
+                img {
+                    margin-top: 2vw;
+                    max-width: 100%;
+                    height: auto !important;
+                    border-radius: 17px;
+
+                    @media all and (max-width:500px) {
+                        margin-top: 9vw;
+                    }
+
+                    @media all and (max-width:500px) {
+                        border-radius: 5px;
+                    }
+                }
+
+                .content-img-title {
+                    // display: flex;
+                    font-family: '微軟正黑體';
+                    letter-spacing: 0.1em;
+                    @include fontSize16pt();
+                    line-height: initial;
+                    padding-left: 1vw;
+
+                    white-space: initial;
+                    z-index: 20;
+                    padding-top: 0.3vw;
+
+                    @media all and (max-width:1024px) {
+                        font-size: $content;
+                        line-height: 6.5vw;
+                        margin-bottom: 2vw;
+                    }
+
+                    b {
+                        font-weight: bold;
+                        margin-right: 1vw;
+
+                        @media all and (max-width:1024px) {
+                            margin-right: 4vw;
+                        }
+                    }
+                }
+
+                .text {
+                    margin-bottom: 1vw;
+                }
+
+            }
+
+            .bottom-box {
+                display: flex;
+                letter-spacing: 0.1em;
+                align-items: center;
+                margin-top: 3.5vw;
+                justify-content: center;
+
+                @media all and (max-width:1024px) {
+                    margin-top: 12vw;
+                    justify-content: center;
+                }
+
+                @media all and (max-width:500px) {
+                    margin-top: 14vw;
+                }
+
+                .return-box {
+
+                    .return-a {
+                        align-items: end;
+                        border: 1px solid #000000;
+                        padding: 0.3vw 0.6vw 0.3vw 0.6vw;
+                        border-radius: 10px;
+                        display: flex;
+                        font-weight: bold;
+                        color: #000000;
+                        font-family: '微軟正黑體';
+                        font-weight: 500;
+                        @include fontSize16pt();
+
+                        @media all and (max-width:1440px) {
+                            border-radius: 6px;
+                            padding: 0.3vw 0.6vw 0.3vw 0.8vw;
+                        }
+
+                        @media all and (max-width:1366px) {
+                            border-radius: 6px;
+                            padding: 0.3vw 0.6vw 0.4vw 0.8vw;
+                        }
+
+                        @media all and (max-width:1024px) {
+                            font-size: $content;
+                            border-radius: 10px;
+                            padding: 0.8vw 2vw 0.7vw 2vw;
+                        }
+
+                        @media all and (max-width:500px) {
+                            border-radius: 7px;
+                        }
+
+                        img {
+                            width: 0.6vw;
+                            margin-top: 0vw;
+                            display: block;
+                            padding-bottom: 0.1vw;
+                            margin-right: 0.5vw;
+
+                            @media all and (max-width:1024px) {
+                                width: 2.5vw;
+                                padding-bottom: 0.8vw;
+                                margin-bottom: 0vw;
+                                margin-right: 1vw;
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .page-top {
+            position: absolute;
+            bottom: 7vw;
+            right: 4vw;
+            z-index: 999;
+            width: 2vw;
+            height: 2vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #dbdbdb;
+            color: #383838;
+            font-size: 0.8vw;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+
+            @media all and (max-width:1024px) {
+                width: 10vw;
+                font-size: 3vw;
+                height: 10vw;
+                bottom: 40vw;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+}

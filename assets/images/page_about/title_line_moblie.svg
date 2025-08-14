@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 428.25 4.49">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名漸層_9);
+      }
+    </style>
+    <linearGradient id="_未命名漸層_9" data-name="未命名漸層 9" x1="2196.87" y1="4735.31" x2="2196.87" y2="4307.06" gradientTransform="translate(-1982.74 -4518.94)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dfdfdf"/>
+      <stop offset=".12" stop-color="#fff"/>
+      <stop offset="1" stop-color="#dfdfdf"/>
+    </linearGradient>
+  </defs>
+  <g id="_圖層_4" data-name="圖層 4">
+    <rect class="cls-1" x="211.88" y="-211.88" width="4.49" height="428.25" transform="translate(216.37 -211.88) rotate(90)"/>
+  </g>
+</svg>

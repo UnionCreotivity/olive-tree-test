@@ -1,0 +1,325 @@
+.pin-spacer {
+    pointer-events: none;
+}
+
+
+.cardInner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 113vh;
+    overflow: hidden;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+
+
+    &.mask_div {
+
+        mask-size: 0vw;
+        // mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0) 0%, rgba(0, 0, 0) 60%, rgb(0, 0, 0, 0) 60%, rgb(0, 0, 0,0) 100%);
+        mask-repeat: no-repeat;
+        mask-position: center 42%;
+        z-index: 150;
+
+        @include tablet{
+            mask-position: center 27%;
+        }
+
+        // visibility: hidden;
+        &.mask_s {
+            mask-image: url(../images/SVG/mask_s.svg);
+        }
+
+        &.mask_c {
+            mask-image: url(../images/SVG/mask_c.svg);
+            position:fixed;
+            // mask-position: center 92%;
+            @include tablet{
+                // mask-position: center 34%;
+            }
+        }
+    }
+
+    .bulge {
+        position: fixed;
+        top: 0;
+        left: 0%;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+
+        .bulge_canvas {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .card {
+        position: absolute;
+        // width: 300px;
+        // height: 420px;
+        width: 11.7vw;
+        height: 16.4vw;
+
+        // top: 0;
+        // bottom: 0;
+        // left: 0;
+        // right: 0;
+        // margin: auto;
+
+        .back {
+            // background-image: url(src/assets/images/tree_bg.png);
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            border: 7px solid white;
+            border-radius: 6%;
+            overflow: hidden;
+            background-color: #fff;
+
+            .back-content {
+
+
+                .back-item-img {
+                    position: absolute;
+                    width: 300%;
+                    top: 14%;
+                    left: -92%;
+                    // transform-style: preserve-3d;
+                    // transform: rotateY(90deg);
+                    // z-index: 10;
+                    z-index: 103;
+
+
+                }
+
+                .olive-tree {
+                    @media all and (max-width:1920px) {
+                        width: 51vw !important;
+                        left: 24.5vw !important;
+                    }
+
+                    @include tablet{
+                        width: 170vw !important;
+                        left: -33vw !important;
+                        top: 53vw !important;
+                    }
+                }
+
+                .lily {
+                    @media all and (max-width:1920px) {
+                        width: 36vw !important;
+                        left: 34vw !important;
+                    }
+
+                    @include tablet {
+                        top: 45vw !important;
+                        width: 123vw !important;
+                        left: -15vw !important;
+                    }
+                }
+
+                .cotton {
+                    @media all and (max-width:1920px) {
+                        width: 29vw !important;
+                        left: 36vw !important;
+                    }
+
+                    @include tablet {
+                        top: 46vw !important;
+                        width: 97vw !important;
+                        left: -2vw !important;
+                    }
+                }
+
+                .campanula {
+                    @media all and (max-width:1920px) {
+                        width: 46vw !important;
+                        left: 27vw !important;
+                    }
+
+                    @media all and (max-width:1680px) {
+                        width: 64vw !important;
+                        left: 19vw !important;
+                    }
+
+                    @media all and (max-width:1440px) {
+                        width: 59vw !important;
+                        left: 22.5vw !important;
+                    }
+
+                    @media all and (max-width:1366px) {
+                        width: 50vw !important;
+                        left: 26vw !important;
+                    }
+
+                    @include tablet{
+                        width: 145vw !important;
+                        left: 7vw !important;
+                        top: 48vw !important;
+                    }
+                }
+
+                .opacity-none-img {
+                    position: absolute;
+                    width: 100%;
+                    top: 11%;
+                    left: -1%;
+                    // z-index: 10;
+                    z-index: 103;
+                    // transform-style: preserve-3d;
+                    display: none;
+                }
+
+                .lily-case-bg-box {
+                    width: 80vw;
+                    height: 100vh;
+                    position: absolute;
+                    z-index: 1;
+                    top: 30%;
+                    left: -19vw;
+                    display: flex;
+                    opacity: 0;
+                    z-index: 100;
+                    // display: none;
+
+                    .lily-case-bg {
+                        align-self: center;
+                        position: relative;
+                        // z-index: 1;
+
+                        display: flex;
+                        z-index: 1;
+                        // will-change: transform;
+                        opacity: 0.25;
+
+                        &.marquee {
+                            animation: marquee 30s linear infinite;
+                            animation-iteration-count: infinite;
+                        }
+
+                        img {
+                            width: 122vw;
+                        }
+                    }
+
+                }
+            }
+
+            .text-content {
+                @include cardContentBox();
+
+                .title {
+                    @include cardTitle();
+                }
+
+                .content {
+                    @include cardContent();
+                }
+
+
+            }
+        }
+    }
+
+    .blur-1 {
+        position: fixed;
+        top: 0%;
+        // left: 21.5%;
+        z-index: 36;
+        // transform: scale(2);
+        opacity: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+
+        img {
+            // width: 56%;
+            height: 100vh;
+            // @media all and (max-width:1920px) {
+            //     width: calc(1190/1920)*100vw;
+            // }
+        }
+    }
+
+    .blur-2 {
+        position: fixed;
+        top: -1%;
+        // left: 18%;
+        z-index: 33;
+        opacity: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+
+        img {
+            // width: 64vw;
+            height: 101vh;
+        }
+    }
+
+    .blur-3 {
+        position: fixed;
+        top: -1%;
+        // left: 15.5%;
+        z-index: 30;
+        opacity: 0;
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+
+        img {
+            // width: 69vw;
+            height: 101vh;
+        }
+
+    }
+
+    .chapter-title {
+        position: fixed;
+        top: 15%;
+        left: 0%;
+        z-index: 40;
+        // transform-style: preserve-3d;
+        // transform: rotateY(0deg);
+        opacity: 0;
+
+        img {
+
+            width: 120%;
+        }
+    }
+
+    .bulge {
+        position: fixed;
+        top: 0;
+        left: 0%;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+
+        .bulge_canvas {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    .video_box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 110;
+
+        video {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
+
+}

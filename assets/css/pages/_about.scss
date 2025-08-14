@@ -1,0 +1,2375 @@
+.about-body {
+    background-image: url(../images/page_about/about_bg.png);
+    background-color: white;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+
+    .about-main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .top-container {
+            width: 100%;
+            padding-top: 5vw;
+            display: flex;
+            justify-content: center;
+
+            // height: calc(var(--vh, 2.8vh) *100);
+            @media all and (max-width:1920px) {
+                padding-top: 8vw;
+            }
+
+            @media all and (max-width:1024px) {
+                height: auto;
+                padding-top: 20vw;
+            }
+
+            .transitions-item {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                padding-bottom: 50vw;
+
+                @media all and (max-width:1024px) {
+                    padding-bottom: 155vw;
+                }
+
+                img {
+                    width: 45%;
+
+                    @media all and (max-width:1024px) {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+
+        .page-contaniner {
+            display: flex;
+            width: 100%;
+            padding-top: 5vw;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+
+            @media all and (max-width:1024px) {
+                padding-bottom: 23vw;
+                padding-top: 10vw;
+            }
+
+            .page-title-box {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+
+                @media all and (max-width:500px) {
+                    margin-bottom: 3vw;
+                }
+
+
+                .page-title-img {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    padding-right: 0.5vw;
+
+
+
+                    #page-title-img-svg {
+                        height: 5vw;
+
+                        @media all and (max-width:1024px) {
+                            height: 15vw;
+                            padding-right: 2vw;
+                        }
+
+                        @media all and (max-width:500px) {
+                            // width: 39%;
+                            padding-right: 1.5vw;
+                        }
+                    }
+                }
+
+                .page-title {
+                    margin-top: 2vw;
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    color: #000000;
+                    font-family: 'Noto Serif TC', serif;
+                    font-size: 1.4vw;
+                    letter-spacing: 0.45em;
+                    font-weight: 600;
+
+                    @media all and (max-width:1024px) {
+                        font-size: $big-title;
+                    }
+                }
+
+            }
+
+            .page-content {
+                position: relative;
+                overflow: visible;
+                padding-top: 3vw;
+
+                @media all and (max-width:1024px) {
+                    padding-top: 10vw;
+                }
+
+                @media all and (max-width:500px) {
+                    padding-top: 7vw;
+                }
+
+                .tab-box {
+                    display: flex;
+                    justify-content: center;
+                    // width: 100%;
+                    font-family: 'Noto Serif TC';
+                    color: #000000;
+                    font-weight: bold;
+                    font-size: 0.9vw;
+                    letter-spacing: 0.1em;
+
+                    position: fixed;
+                    flex-direction: column;
+                    top:7vw;
+                    left: -8vw;
+                    z-index: 10;
+
+
+                    @media all and (max-width:1440px) {
+                        font-size: 1.1vw;
+                    }
+
+                    @media all and (max-width:1024px) {
+                        font-size: $sub-title;
+                        letter-spacing: 0.25em;
+                        position: relative;
+                        flex-direction: row;
+                        left: 0;
+                        top: 0;
+                        padding-left: 0;
+                    }
+
+                    @media all and (max-width:500px) {
+                        margin-bottom: 5vw;
+                    }
+
+                    .about-tab, .video-tab {
+                        cursor: pointer;
+                        letter-spacing: 0.2em;
+                        padding: 0.4vw 1vw;
+                        margin: 3% 0;
+                        width: auto;
+                        box-sizing: content-box;
+                        background-color: #4e5e2c;
+                        color: #fff;
+                        font-size: 15px;
+
+                        @media all and (max-width:1024px){
+                            width: auto;
+                            padding: 0;
+                            box-sizing: border-box;
+                            background: none;
+                            color: #000;
+                        }
+                        
+
+                        &:hover {
+                            color: #b6c396;
+                        }
+                        &.active{
+                            color: #b6c396;
+                        }
+                    }
+
+                    .tab-line {
+                        display: none;
+                        width: 0.8vw;
+                        height: 1vw;
+                        align-self: center;
+                        margin-left: 1.5vw;
+                        margin-right: 1.5vw;
+                        padding-top: 0.1vw;
+
+                        @media all and (max-width:1440px) {
+                            height: 1.3vw;
+                        }
+
+                        @media all and (max-width:1024px) {
+                            display: block;
+                            height: 3.3vw;
+                            margin-left: 5vw;
+                            margin-right: 5vw;
+                        }
+                    }
+
+                }
+
+                .content {
+                    display: flex;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    position: relative;
+
+                    @media all and (max-width:1024px) {
+                        flex-direction: column;
+                    }
+
+                    .about-tab-container {
+                        display: flex;
+                        width: 100%;
+                        justify-content: center;
+                        flex-direction: column;
+
+
+                        .peace-victory-box {
+                            display: flex;
+                            width: 100%;
+                            justify-content: center;
+                            margin-top: 4vw;
+                            position: relative;
+
+                            @media all and (max-width:1024px) {
+                                flex-direction: column-reverse;
+                                // margin-top: 7vw;
+                            }
+
+                            .left-box {
+                                display: flex;
+                                width: 38%;
+                                position: relative;
+
+                                @media all and (max-width:1024px) {
+                                    width: 100%;
+                                    margin-top: 10vw;
+                                }
+
+                                .peace-svg {
+                                    display: none;
+
+                                    @media all and (max-width:1024px) {
+                                        display: block;
+                                        position: absolute;
+                                        height: 7.3vw;
+                                        right: 17vw;
+                                        top: 1vw;
+                                    }
+                                }
+
+                                .victory-svg {
+                                    display: none;
+
+                                    @media all and (max-width:1024px) {
+                                        display: block;
+                                        position: absolute;
+                                        height: 7vw;
+                                        left: 17vw;
+                                        bottom: 1vw;
+                                    }
+                                }
+
+                                .img-box {
+                                    width: 100%;
+
+                                    img {
+                                        border: 0.6vw solid #b7c497;
+                                        border-radius: 50%;
+                                        width: 100%;
+
+                                        @media all and (max-width:1024px) {
+                                            border: 1.6vw solid #b7c497;
+                                            width: 90%;
+                                        }
+                                    }
+                                }
+
+                                .img-box1 {
+                                    @media all and (max-width:1024px) {
+                                        margin-left: 5vw;
+                                    }
+                                }
+
+                                .img-box2 {
+                                    margin-top: 7vw;
+                                    margin-left: 1vw;
+
+                                    @media all and (max-width:1024px) {
+                                        margin-top: 19vw;
+                                        margin-left: -4vw;
+                                    }
+                                }
+
+                                .peace-victory {
+                                    position: absolute;
+                                    bottom: 2vw;
+                                    margin-left: 4vw;
+
+                                    @media all and (max-width:1920px) {
+                                        margin-left: 2vw;
+                                        bottom: 0.5vw;
+                                    }
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+
+                                    img {
+                                        width: 100%;
+
+                                        @media all and (max-width:1920px) {
+                                            width: 13vw;
+                                        }
+                                    }
+
+                                    #peace_victory_svg {
+                                        width: 13vw;
+
+                                        @media all and (max-width:1920px) {
+                                            width: 15vw;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .right-box {
+                                display: flex;
+                                padding-top: 10vw;
+                                margin-left: 3vw;
+
+                                @media all and (max-width:1024px) {
+                                    margin-left: 0vw;
+                                    padding: 0vw 10vw;
+                                    justify-content: center;
+                                    padding-top: 7vw;
+                                }
+
+                                @media all and (max-width:500px) {
+                                    padding: 0vw 10vw;
+                                }
+
+                                .leaf-icon {
+                                    margin-right: 0.5vw;
+
+                                    @media all and (max-width:1024px) {
+                                        margin-right: 2vw;
+                                    }
+
+                                    img {
+                                        width: 30px;
+
+                                        @media all and (max-width:1920px) {
+                                            width: 20px;
+                                        }
+
+                                        @media all and (max-width:1024px) {
+                                            width: 4vw;
+                                            padding-top: 1.5vw;
+                                        }
+                                    }
+                                }
+
+                                .title-box {
+                                    display: flex;
+                                    color: #4e5e2c;
+                                    font-family: 'Noto Serif TC';
+                                    font-weight: bold;
+                                    flex-direction: column;
+                                    letter-spacing: 0.1em;
+                                    @include fontSize24pt();
+
+                                    @media all and (max-width:1024px) {
+                                        font-size: $main-title;
+
+                                    }
+
+                                    .title-text {
+                                        display: flex;
+
+                                        img.title_crosses {
+                                            margin-left: 0.5vw;
+                                            margin-right: 0.5vw;
+                                            width: 20px;
+
+                                            @media all and (max-width:1920px) {
+                                                width: 0.7vw;
+                                            }
+
+                                            @media all and (max-width:1440px) {
+                                                margin-left: 0.5vw;
+                                                margin-right: 0.7vw;
+                                            }
+
+                                            @media all and (max-width:1024px) {
+                                                width: 2.5vw;
+                                                margin-left: 2vw;
+                                                margin-right: 2vw;
+                                            }
+
+                                        }
+
+                                    }
+                                }
+
+                                .about_line {
+                                    width: 80%;
+                                    margin-top: 0.8vw;
+                                    margin-bottom: 0.5vw;
+
+                                    @media all and (max-width:1024px) {
+                                        margin-top: 3.5vw;
+                                        margin-bottom: 6vw;
+                                    }
+
+                                    @media all and (max-width:500px) {
+                                        width: 87%;
+                                    }
+                                }
+
+                                .content {
+                                    color: #000000;
+                                    font-family: '微軟正黑體';
+                                    letter-spacing: 0.1em;
+                                    @include fontSize16pt();
+                                    line-height: 1.5vw;
+
+                                    @media all and (max-width:1920px) {
+                                        line-height: 1.8vw;
+                                    }
+
+                                    @media all and (max-width:1024px) {
+                                        font-size: $content;
+                                        line-height: 7vw;
+
+                                        br{
+                                            display: none;
+                                        }
+                                    }
+                                }
+
+                                .content2 {
+                                    margin-top: 1.5vw;
+                                    color: #000000;
+                                    font-family: '微軟正黑體';
+                                    letter-spacing: 0.1em;
+                                    @include fontSize16pt();
+                                    line-height: 1.5vw;
+
+                                    @media all and (max-width:1920px) {
+                                        line-height: 1.8vw;
+                                    }
+
+                                    @media all and (max-width:1024px) {
+                                        font-size: $content;
+                                        line-height: 7vw;
+                                        margin-top: 5vw;
+                                    }
+                                }
+                            }
+                        }
+
+                        .spirit-box {
+                            display: flex;
+                            width: 100%;
+                            justify-content: center;
+                            margin-top: 8vw;
+                            flex-direction: column;
+                            position: relative;
+
+                            @media all and (max-width:1024px) {
+                                margin-top: 18vw;
+                            }
+
+                            .bg-light {
+                                position: absolute;
+                                width: 45%;
+                                right: -10vw;
+                                top: 21vw;
+                            }
+
+                            .title-box {
+                                display: flex;
+                                margin: 0 auto;
+
+                                .title-img-box {
+                                    width: 3.5%;
+                                    align-self: center;
+                                    margin-right: 1vw;
+
+                                    @media all and (max-width:1024px) {
+                                        margin-right: 2vw;
+                                        display: none;
+                                    }
+
+                                    img {
+                                        width: 100%;
+                                        padding-top: 0.3vw;
+
+                                        @media all and (max-width:1024px) {
+                                            width: 4vw;
+                                        }
+                                    }
+                                }
+
+                                .title {
+                                    font-family: 'Noto Serif TC';
+                                    font-weight: bold;
+                                    color: #4e5e2c;
+                                    letter-spacing: 0.1em;
+                                    @include fontSize24pt();
+
+                                    @media all and (max-width:1024px) {
+                                        font-size: $main-title;
+                                        display: none;
+                                    }
+                                }
+
+                                .title-moblie {
+                                    display: none;
+                                    font-family: 'Noto Serif TC';
+                                    font-weight: bold;
+                                    color: #4e5e2c;
+                                    letter-spacing: 0.1em;
+                                    @include fontSize24pt();
+
+
+                                    @media all and (max-width:1024px) {
+                                        font-size: $main-title;
+                                        display: flex;
+                                        justify-content: center;
+                                        text-align: center;
+                                        display: flex;
+                                        flex-direction: column;
+                                    }
+
+                                    .title-img-box-moblie {
+
+                                        img {
+                                            width: 100%;
+
+                                            @media all and (max-width:1024px) {
+                                                width: 3.7vw;
+                                                align-items: flex-end;
+                                                margin-right: 2vw;
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+
+                            .content-box {
+                                display: flex;
+                                position: relative;
+                                justify-content: center;
+                                margin-top: 8vw;
+                                height: 38vw;
+
+
+                                @media all and (max-width:1024px) {
+                                    text-align: right;
+                                    height: 90vw;
+                                    padding: 0vw 3vw;
+                                }
+
+                                .tree-box {
+                                    text-align: center;
+                                    position: relative;
+                                    width: 100%;
+
+                                    @media all and (max-width:1024px) {
+
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+
+                                    }
+
+                                    .spirit-tree-img {
+                                        width: 35%;
+
+                                        @media all and (max-width:1024px) {
+                                            width: 55%;
+                                            align-self: end;
+
+                                        }
+                                    }
+
+                                }
+
+                                .perfect-box {
+                                    display: flex;
+                                    margin-top: -20vw;
+                                    margin-left: 14.5vw;
+                                    width: 36vw;
+                                    cursor: pointer;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+
+                                    .left-box {
+                                        width: 10vw;
+                                        margin-right: 1.5vw;
+
+                                        opacity: 0;
+
+                                        .img-box {
+                                            border: 0.4vw solid #b7c497;
+                                            border-radius: 50%;
+                                            margin-top: -4vw;
+                                            width: 100%;
+                                            position: relative;
+                                            overflow: hidden;
+                                            width: 10vw;
+                                            height: 10vw;
+
+                                            img {
+                                                border-radius: 50%;
+                                                width: 11vw;
+                                                height: 11vw;
+                                                margin-left: -14%;
+                                                margin-top: -1%;
+                                                // height: 20vw;
+                                                overflow: hidden;
+
+                                            }
+                                        }
+
+                                    }
+
+                                    .right-box {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: left;
+                                        text-align: left;
+
+                                        .title-zh {
+                                            color: #000000;
+                                            font-family: 'Noto Serif TC';
+                                            font-size: 0.9vw;
+                                            letter-spacing: 0.1em;
+                                            font-weight: 600;
+                                        }
+
+                                        .title-en {
+                                            margin-top: 0.5vw;
+                                            margin-bottom: 0.7vw;
+                                            width: 6.5vw;
+
+                                            .title-en-img {
+                                                width: 100%;
+                                            }
+                                        }
+
+                                        .spirit-content-line {
+                                            position: relative;
+
+                                            .line-box {
+                                                width: 24vw;
+
+                                                img {
+                                                    width: 100%;
+                                                }
+                                            }
+
+                                            .content {
+                                                position: absolute;
+                                                top: 0px;
+                                                margin-top: 0.7vw;
+                                                font-family: '微軟正黑體';
+                                                letter-spacing: 0.1em;
+                                                @include fontSize16pt();
+                                                line-height: 1.5vw;
+                                                opacity: 0;
+
+                                                @media all and (max-width:1920px) {
+                                                    line-height: 1.8vw;
+                                                }
+
+                                                @media all and (max-width:1024px) {
+                                                    font-size: $content;
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+
+                                .unified-box {
+                                    display: flex;
+                                    margin-top: 7vw;
+                                    margin-left: 14.5vw;
+                                    width: 39vw;
+                                    cursor: pointer;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+
+                                    .left-box {
+                                        width: 10vw;
+                                        margin-right: 1.5vw;
+                                        opacity: 0;
+
+                                        .img-box {
+                                            border: 0.4vw solid #b7c497;
+                                            border-radius: 50%;
+                                            margin-top: -4vw;
+                                            width: 100%;
+                                            position: relative;
+                                            overflow: hidden;
+                                            width: 10vw;
+                                            height: 10vw;
+
+                                            img {
+                                                border-radius: 50%;
+                                                width: 20vw;
+                                                height: 18vw;
+                                                margin-left: -57%;
+                                                margin-top: -21%;
+                                                overflow: hidden;
+
+                                            }
+                                        }
+
+                                    }
+
+                                    .right-box {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: left;
+                                        text-align: left;
+                                        position: relative;
+
+                                        .title-zh {
+                                            color: #000000;
+                                            font-family: 'Noto Serif TC';
+                                            font-size: 0.9vw;
+                                            letter-spacing: 0.1em;
+                                            font-weight: 600;
+                                        }
+
+                                        .title-en {
+                                            margin-top: 0.5vw;
+                                            margin-bottom: 0.7vw;
+                                            width: 6.5vw;
+
+                                            .title-en-img {
+                                                width: 100%;
+                                            }
+                                        }
+
+                                        .spirit-content-line {
+                                            position: absolute;
+                                            top: -6vw;
+
+                                            .line-box {
+                                                width: 24vw;
+
+                                                img {
+                                                    width: 100%;
+                                                }
+                                            }
+
+                                        }
+
+                                        .content {
+                                            margin-top: 0.5vw;
+                                            font-family: '微軟正黑體';
+                                            letter-spacing: 0.1em;
+                                            @include fontSize16pt();
+                                            line-height: 1.5vw;
+                                            opacity: 0;
+
+                                            @media all and (max-width:1920px) {
+                                                line-height: 1.8vw;
+                                            }
+
+                                            @media all and (max-width:1024px) {
+                                                font-size: $content;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .energetic-box {
+                                    display: flex;
+                                    margin-top: -27vw;
+                                    margin-left: 53vw;
+                                    width: 50vw;
+                                    padding-left: 10vw;
+                                    cursor: pointer;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+
+                                    .left-box {
+                                        width: 10vw;
+                                        margin-right: 1vw;
+                                        opacity: 0;
+
+                                        .img-box {
+                                            border: 0.4vw solid #b7c497;
+                                            border-radius: 50%;
+                                            margin-top: -3vw;
+                                            width: 100%;
+                                            position: relative;
+                                            overflow: hidden;
+                                            width: 10vw;
+                                            height: 10vw;
+                                            margin-left: -3vw;
+
+                                            @media all and (max-width:1440px) {
+                                                margin-left: -6.5vw;
+                                            }
+
+                                            img {
+                                                border-radius: 50%;
+                                                width: 18vw;
+                                                height: 17vw;
+                                                margin-left: -61%;
+                                                margin-top: -39%;
+                                                overflow: hidden;
+
+                                            }
+                                        }
+
+                                    }
+
+                                    .right-box {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: left;
+                                        text-align: left;
+                                        position: relative;
+
+                                        .title-zh {
+                                            color: #000000;
+                                            font-family: 'Noto Serif TC';
+                                            font-size: 0.9vw;
+                                            letter-spacing: 0.1em;
+                                            font-weight: 600;
+                                        }
+
+                                        .title-en {
+                                            margin-top: 0.5vw;
+                                            margin-bottom: 0.7vw;
+                                            width: 8.5vw;
+
+                                            .title-en-img {
+                                                width: 100%;
+                                            }
+                                        }
+
+                                        .spirit-content-line {
+                                            position: absolute;
+                                            top: 4.8vw;
+                                            left: -11.5vw;
+
+                                            .line-box {
+                                                width: 20vw;
+
+                                                img {
+                                                    width: 100%;
+                                                }
+                                            }
+
+                                        }
+
+                                        .content {
+                                            margin-top: 0.5vw;
+                                            font-family: '微軟正黑體';
+                                            letter-spacing: 0.1em;
+                                            @include fontSize16pt();
+                                            line-height: 1.5vw;
+                                            opacity: 0;
+
+                                            @media all and (max-width:1920px) {
+                                                line-height: 1.8vw;
+                                            }
+
+                                            @media all and (max-width:1024px) {
+                                                font-size: $content;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .energetic-box-moblie {
+                                    display: none;
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 5vw;
+
+                                    @media all and (max-width:1024px) {
+                                        display: flex;
+                                        flex-direction: column;
+                                    }
+
+                                    .title-text {
+                                        color: #000000;
+                                        font-family: 'Noto Serif TC';
+                                        font-size: 0.9vw;
+                                        letter-spacing: 0.1em;
+                                        font-weight: bold;
+                                        padding-top: 2vw;
+                                        padding-left: 4vw;
+
+                                        @media all and (max-width:1024px) {
+                                            font-size: $content;
+
+                                        }
+                                    }
+
+                                    .title-img-box {
+                                        display: flex;
+                                        width: 100%;
+                                        margin-top: 2vw;
+
+                                        .left-arrow-box {
+                                            width: 100%;
+                                            display: flex;
+                                            align-self: center;
+                                            margin-right: 2vw;
+
+                                            img {
+                                                height: 6vw;
+                                                text-align: center;
+                                            }
+                                        }
+
+                                        .title-en-img {
+                                            height: 7vw;
+                                        }
+                                    }
+
+                                    .energetic-line-moblie {
+                                        left: 8vw;
+                                        width: 59vw;
+                                        position: absolute;
+                                        top: 19vw;
+                                    }
+                                }
+
+                                .perfect-box-moblie {
+                                    display: none;
+                                    position: absolute;
+                                    top: 30vw;
+                                    left: 5vw;
+
+                                    @media all and (max-width:1024px) {
+                                        display: flex;
+                                        flex-direction: column;
+                                    }
+
+                                    .title-text {
+                                        color: #000000;
+                                        font-family: 'Noto Serif TC';
+                                        font-size: 0.9vw;
+                                        letter-spacing: 0.1em;
+                                        font-weight: bold;
+                                        text-align: right;
+                                        padding-top: 2vw;
+
+                                        @media all and (max-width:1024px) {
+                                            font-size: $content;
+                                            padding-left: 8vw;
+                                        }
+                                    }
+
+                                    .title-img-box {
+                                        display: flex;
+                                        width: 100%;
+                                        margin-top: 2vw;
+
+                                        .left-arrow-box {
+                                            width: 100%;
+                                            display: flex;
+                                            align-self: center;
+                                            margin-right: 2vw;
+
+                                            img {
+                                                height: 6vw;
+                                                text-align: center;
+                                            }
+                                        }
+
+                                        .title-en-img {
+                                            height: 7vw;
+                                            margin-right: 3vw;
+                                        }
+                                    }
+
+                                    .perfect-line-moblie {
+                                        left: 8vw;
+                                        width: 49vw;
+                                        position: absolute;
+                                        top: 7vw;
+                                    }
+                                }
+
+                                .unified-box-moblie {
+                                    display: none;
+                                    position: absolute;
+                                    top: 60vw;
+                                    left: 5vw;
+
+                                    @media all and (max-width:1024px) {
+                                        display: flex;
+                                        flex-direction: column;
+                                    }
+
+                                    .title-text {
+                                        color: #000000;
+                                        font-family: 'Noto Serif TC';
+                                        font-size: 0.9vw;
+                                        letter-spacing: 0.1em;
+                                        font-weight: bold;
+                                        // text-align: right;
+                                        padding-top: 2vw;
+
+                                        @media all and (max-width:1024px) {
+                                            font-size: $content;
+                                            padding-left: 8vw;
+                                        }
+                                    }
+
+                                    .title-img-box {
+                                        display: flex;
+                                        width: 100%;
+                                        margin-top: 2vw;
+
+                                        .left-arrow-box {
+                                            width: 100%;
+                                            display: flex;
+                                            align-self: center;
+                                            margin-right: 2vw;
+
+                                            img {
+                                                height: 6vw;
+                                                text-align: center;
+                                            }
+                                        }
+
+                                        .title-en-img {
+                                            height: 7vw;
+                                            margin-right: 3vw;
+                                        }
+                                    }
+
+                                    .unified-line-moblie {
+                                        left: 8vw;
+                                        width: 59vw;
+                                        position: absolute;
+                                        top: -15.5vw;
+                                    }
+                                }
+                            }
+                        }
+
+                        .olivetree-box {
+                            display: flex;
+                            width: 100%;
+                            position: relative;
+
+                            @media all and (max-width:1024px) {
+                                flex-direction: column-reverse;
+                                margin-top: 7vw;
+                                margin-bottom: 10vw;
+                            }
+
+                            .olivetree-bg {
+                                position: absolute;
+                                bottom: -11vw;
+                                width: 30%;
+                                right: -18vw;
+
+                                @media all and (max-width:1920px) {
+                                    line-height: 1.8vw;
+                                }
+
+                                @media all and (max-width:1440px) {
+                                    width: 35%;
+                                }
+                            }
+
+                            .left-box {
+                                width: 45%;
+
+                                @media all and (max-width:1024px) {
+                                    width: 100%;
+                                    padding: 0 7vw;
+                                    position: relative;
+                                }
+
+                                .img1-pc {
+
+                                    width: 100%;
+
+                                    @media all and (max-width:1440px) {
+                                        width: 90%;
+                                    }
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+
+                                }
+
+                                .img1-moblie {
+                                    display: none;
+                                    width: 100%;
+
+                                    @media all and (max-width:1024px) {
+                                        display: block;
+                                    }
+
+                                }
+
+                                .img1_light {
+                                    display: none;
+
+                                    @media all and (max-width:1024px) {
+                                        display: block;
+                                        position: absolute;
+                                        z-index: 99;
+                                        width: 70%;
+                                        top: 0px;
+                                        right: 0px;
+                                    }
+                                }
+                            }
+
+                            .right-box {
+                                width: 55%;
+                                display: flex;
+                                flex-direction: column;
+                                align-self: center;
+
+                                @media all and (max-width:1024px) {
+                                    width: 100%;
+                                    padding: 0vw 15vw;
+                                    margin-bottom: 5vw;
+                                }
+
+                                .title {
+                                    // width: 7.5vw;
+                                    margin: 0 auto;
+
+                                    @media all and (max-width:1024px) {
+                                        width: initial;
+                                        margin-bottom: 5vw;
+                                    }
+
+                                    img {
+                                        width: 100%;
+                                        text-align: center;
+
+                                        @media all and (max-width:1024px) {
+                                            height: 8vw;
+                                            width: initial;
+                                        }
+                                    }
+
+                                    #olivetree-svg {
+
+                                        text-align: center;
+                                        height: 2.15vw;
+
+                                        @media all and (max-width:1024px) {
+                                            height: 8vw;
+                                            width: initial;
+                                        }
+                                    }
+                                }
+
+                                .content {
+                                    margin-top: 0.5vw;
+                                    font-family: '微軟正黑體';
+                                    letter-spacing: 0.1em;
+                                    @include fontSize16pt();
+                                    line-height: 1.5vw;
+                                    text-align: center;
+                                    display: flex;
+                                    justify-content: center;
+
+                                    @media all and (max-width:1920px) {
+                                        line-height: 1.8vw;
+                                    }
+
+                                    @media all and (max-width:1024px) {
+                                        font-size: $content;
+                                        line-height: 7vw;
+                                        text-align: left;
+
+                                        br{
+                                            display: none;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .sector-box {
+                            display: flex;
+                            width: 100%;
+                            position: relative;
+                            background-image: url(../images/page_about/green_bg.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            padding-top: 9vw;
+                            flex-direction: column;
+                            overflow: hidden;
+
+                            @media all and (max-width:1024px) {
+                                padding-top: 20vw;
+                                padding-bottom: 13vw;
+                                background-image: url(../images/page_about/green_bg_moblie.png);
+                                background-position: top;
+                            }
+
+                            .title-box {
+                                display: flex;
+                                flex-direction: column;
+                                margin: 0 auto;
+
+                                .title-img {
+                                    width: 13vw;
+                                    margin: 0 auto;
+                                    margin-bottom: 0.5vw;
+
+                                    @media all and (max-width:1024px) {
+                                        width: initial;
+                                    }
+
+                                    @media all and (max-width:500px) {
+                                        margin-bottom: 1vw;
+                                    }
+
+                                    img {
+                                        width: 100%;
+                                        text-align: center;
+
+                                        @media all and (max-width:1024px) {
+                                            height: 8vw;
+                                            width: initial;
+                                        }
+                                    }
+                                }
+
+                                .title {
+                                    display: flex;
+                                    color: #fff;
+                                    @include fontSize24pt();
+                                    font-family: 'Noto Serif TC', serif;
+                                    letter-spacing: 0.1em;
+                                    text-align: center;
+                                    font-weight: bold;
+
+                                    @media all and (max-width:1024px) {
+                                        font-size: $big-title;
+                                        display: none;
+                                    }
+                                }
+
+                                .title-moblie {
+                                    display: none;
+
+                                    @media all and (max-width:1024px) {
+                                        display: flex;
+                                        color: #fff;
+                                        font-size: $big-title;
+                                        font-weight: bold;
+                                        font-family: 'Noto Serif TC', serif;
+                                        letter-spacing: 0.1em;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+
+                            .content-box {
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 10vw;
+                                position: relative;
+
+                                @media all and (max-width:1024px) {
+                                    flex-direction: column;
+                                }
+
+                                #sector-svg {
+                                    position: absolute;
+                                    width: 54vw;
+                                    top: -2vw;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+                                }
+
+                                .research-title {
+                                    position: absolute;
+                                    top: 12vw;
+                                    left: 15vw;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+
+                                    .title {
+                                        color: #ffffff;
+                                        text-align: center;
+                                        font-family: 'Noto Serif TC', serif;
+                                        font-size: 0.85vw;
+                                        letter-spacing: 0.1em;
+                                        font-weight: 600;
+                                    }
+
+                                    .title-img {
+                                        width: 7.5vw;
+                                        margin: 0 auto;
+                                        margin-top: 0.2vw;
+                                        position: relative;
+
+                                        img {
+                                            height: 3vw;
+                                        }
+
+                                        #research-svg {
+                                            height: 3vw;
+                                        }
+
+                                        #research-white-svg {
+                                            position: absolute;
+                                            top: 0vw;
+                                            height: 3vw;
+                                            left: 0vw;
+                                            opacity: 0;
+                                        }
+
+                                    }
+                                }
+
+                                .position-title {
+                                    position: absolute;
+                                    top: -6vw;
+                                    left: 35vw;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+
+                                    .title {
+                                        color: #ffffff;
+                                        text-align: center;
+                                        font-family: 'Noto Serif TC', serif;
+                                        font-size: 0.85vw;
+                                        letter-spacing: 0.1em;
+                                        font-weight: 600;
+                                    }
+
+                                    .title-img {
+                                        width: 7vw;
+                                        margin: 0 auto;
+                                        margin-top: 0.2vw;
+                                        position: relative;
+
+                                        img {
+                                            height: 3vw;
+                                        }
+
+                                        #position-svg {
+                                            height: 3vw;
+                                        }
+
+                                        #position-white-svg {
+                                            position: absolute;
+                                            top: 0px;
+                                            height: 3vw;
+                                            left: 0vw;
+                                            opacity: 0;
+                                        }
+                                    }
+                                }
+
+                                .plan-title {
+                                    position: absolute;
+                                    top: -6vw;
+                                    right: 35vw;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+
+                                    .title {
+                                        color: #ffffff;
+                                        text-align: center;
+                                        font-family: 'Noto Serif TC', serif;
+                                        font-size: 0.85vw;
+                                        letter-spacing: 0.1em;
+                                        font-weight: 600;
+                                    }
+
+                                    .title-img {
+                                        width: 5vw;
+                                        text-align: center;
+                                        margin: 0 auto;
+                                        margin-top: 0.2vw;
+                                        position: relative;
+
+                                        img {
+                                            height: 3vw;
+                                        }
+
+                                        #plan-svg {
+                                            height: 3vw;
+                                        }
+
+                                        #plan-white-svg {
+                                            position: absolute;
+                                            top: 0px;
+                                            height: 3vw;
+                                            left: 0.65vw;
+                                            opacity: 0;
+                                        }
+                                    }
+                                }
+
+                                .marketing-title {
+                                    position: absolute;
+                                    top: 12vw;
+                                    right: 14vw;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+
+                                    .title {
+                                        color: #ffffff;
+                                        text-align: center;
+                                        font-family: 'Noto Serif TC', serif;
+                                        font-size: 0.85vw;
+                                        letter-spacing: 0.1em;
+                                        font-weight: 600;
+                                    }
+
+                                    .title-img {
+                                        width: 5vw;
+                                        text-align: center;
+                                        margin-top: 0.2vw;
+                                        margin-right: 4vw;
+                                        position: relative;
+
+                                        img {
+                                            height: 3vw;
+                                        }
+
+                                        #marketing-svg {
+                                            height: 3vw;
+                                        }
+
+                                        #marketing-white-svg {
+                                            position: absolute;
+                                            top: 0px;
+                                            height: 3vw;
+                                            left: 0px;
+                                            opacity: 0;
+                                        }
+                                    }
+                                }
+
+                                .sector-item-box {
+                                    position: relative;
+
+                                    img {
+                                        width: 50vw;
+                                    }
+                                }
+
+                                .all-box {
+                                    position: relative;
+                                    z-index: 1;
+                                    display: flex;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+
+                                    .all-img {
+                                        width: 50vw;
+                                    }
+
+                                    .research-circle {
+                                        position: absolute;
+                                        top: 15vw;
+                                        left: -0.65vw;
+                                        width: 0.8vw;
+                                    }
+
+                                    .research-white-circle {
+                                        position: absolute;
+                                        top: 14.8vw;
+                                        left: -0.85vw;
+                                        width: 1.2vw;
+                                    }
+
+                                    .position-circle {
+                                        position: absolute;
+                                        top: -0.1vw;
+                                        left: 13.75vw;
+                                        width: 0.8vw;
+                                    }
+
+                                    .position-white-circle {
+                                        position: absolute;
+                                        top: -0.3vw;
+                                        left: 13.56vw;
+                                        width: 1.2vw;
+                                    }
+
+                                    .plan-circle {
+                                        position: absolute;
+                                        top: -0.36vw;
+                                        left: 34.75vw;
+                                        width: 0.8vw;
+                                    }
+
+                                    .plan-white-circle {
+                                        position: absolute;
+                                        top: -0.57vw;
+                                        left: 34.55vw;
+                                        width: 1.2vw;
+                                    }
+
+                                    .marketing-circle {
+                                        position: absolute;
+                                        top: 15vw;
+                                        right: -0.65vw;
+                                        width: 0.8vw;
+                                    }
+
+                                    .marketing-white-circle {
+                                        position: absolute;
+                                        top: 14.8vw;
+                                        right: -0.85vw;
+                                        width: 1.2vw;
+                                    }
+
+
+                                    .white-circle {
+                                        opacity: 0;
+
+                                    }
+
+                                }
+
+                                .research-box-a,
+                                .position-box-a,
+                                .plan-box-a,
+                                .marketing-box-a {
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+                                }
+
+                                .research-box {
+                                    position: absolute;
+                                    z-index: 3;
+                                    clip-path: polygon(85% 78%, -207% 66%, 22% 0%);
+                                    width: 27%;
+                                    height: 22vw;
+                                    top: 8vw;
+                                    left: 26.8vw;
+                                }
+
+                                .position-box {
+                                    position: absolute;
+                                    z-index: 3;
+                                    // background-color: pink;
+                                    clip-path: polygon(65% 101%, 64% 0, -9% 21%);
+                                    width: 26%;
+                                    height: 24vw;
+                                    top: -2px;
+                                    left: 33vw;
+                                }
+
+                                .plan-box {
+                                    position: absolute;
+                                    z-index: 3;
+                                    // clip-path: polygon(52% 100%, 51% -37%, 99% 0%);
+                                    // background-color: rgb(192, 232, 255);
+                                    clip-path: polygon(52% 98%, 52% -11%, 124% -2%);
+                                    width: 33%;
+                                    height: 24vw;
+                                    top: 1vw;
+                                    left: 33vw;
+
+                                }
+
+                                .marketing-box {
+                                    position: absolute;
+                                    z-index: 3;
+                                    // clip-path: polygon(52% 100%, 115% -37%, 400% 102%);
+                                    clip-path: polygon(52% 100%, 121% -37%, 400% 102%);
+                                    width: 50%;
+                                    height: 24vw;
+                                    top: 1vw;
+                                    left: 24vw;
+                                }
+
+                                .sector-item-img {
+                                    position: absolute;
+                                    display: flex;
+                                    bottom: 0px;
+                                    pointer-events: none;
+
+                                    img {
+                                        width: 50vw;
+                                    }
+                                }
+
+                                .research-img {
+                                    opacity: 0;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+                                }
+
+                                .plan-img {
+                                    opacity: 0;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+                                }
+
+                                .position-img {
+                                    opacity: 0;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+                                }
+
+                                .marketing-img {
+                                    opacity: 0;
+
+                                    @media all and (max-width:1024px) {
+                                        display: none;
+                                    }
+                                }
+
+                                .swiper {
+                                    text-align: center;
+                                    width: 100%;
+                                    display: none;
+                                    position: relative;
+
+                                    @media all and (max-width:1024px) {
+                                        display: block;
+                                    }
+
+                                    .swiper-wrapper {
+                                        .swiper-slide {
+                                            img {
+                                                width: 100%;
+
+                                                @media all and (max-width:500px) {
+                                                    width: 95%;
+                                                }
+                                            }
+
+                                            .swiper-title {
+                                                display: flex;
+                                                flex-direction: column;
+                                                margin-top: 10vw;
+
+
+                                                .title {
+                                                    color: #ffffff;
+                                                    text-align: center;
+                                                    font-family: 'Noto Serif TC', serif;
+                                                    font-size: $sub-title;
+                                                    letter-spacing: 0.1em;
+                                                }
+
+                                                .title-img {
+                                                    margin-top: 0.7vw;
+
+                                                    img {
+                                                        height: 12vw;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .swiper-controller {
+                                        display: flex;
+                                        position: absolute;
+                                        bottom: 7vw;
+                                        width: 100%;
+
+                                        .slider-controller {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            width: 100%;
+                                            padding: 0vw 12vw;
+
+                                            .slider-arrow {
+                                                z-index: 10;
+
+                                                img {
+                                                    width: 85%;
+
+                                                    @media all and (max-width:500px) {
+                                                        width: 50%;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .finger-box {
+                                    position: absolute;
+                                    bottom: 10vw;
+                                    z-index: 99;
+                                    left: 10vw;
+                                    top: 66%;
+                                    left: 50%;
+                                    transform: translate(-50%, -66%);
+
+                                    img {
+                                        width: 80%;
+
+                                        @media all and (max-width:500px) {
+                                            width: 40%;
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                    .bottom-img-box {
+                        display: flex;
+                        justify-content: center;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 100vh;
+
+                        .left-box {
+                            height: 100%;
+                            width: 25%;
+                            position: relative;
+
+                            @media all and (max-width:1024px) {
+                                display: none;
+                            }
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                object-fit: cover;
+                            }
+
+                        }
+
+                        .middle-box {
+                            width: 50%;
+                            position: relative;
+                            height: 100%;
+                            overflow: hidden;
+
+                            @media all and (max-width:1024px) {
+                                display: none;
+                            }
+
+                            .middle-img {
+                                height: 100%;
+                                width: 100%;
+                                position: absolute;
+                                overflow: hidden;
+                                top: 0;
+                                left: 0;
+                                object-fit: cover;
+                            }
+
+                            .title-box {
+                                position: absolute;
+                                top: 0px;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+
+                                .title {
+                                    margin: 0 auto;
+                                    text-align: center;
+
+                                    img {
+                                        width: 20vw;
+
+                                        @media all and (max-width:1920px) {
+                                            width: 27vw;
+                                        }
+                                    }
+
+                                    #bottom-middle-svg {
+                                        width: 20vw;
+
+                                        @media all and (max-width:1920px) {
+                                            width: 27vw;
+                                        }
+                                    }
+
+                                }
+
+                                .content-box {
+                                    display: flex;
+                                    text-align: center;
+                                    justify-content: center;
+                                    margin: 0 auto;
+                                    margin-top: 1vw;
+                                    width: 100%;
+
+                                    .content {
+                                        color: white;
+                                        font-family: '微軟正黑體';
+                                        letter-spacing: 0.2em;
+                                        line-height: 1.3vw;
+                                        width: 100%;
+                                        justify-content: center;
+                                        @include fontSize16pt();
+
+                                        @media all and (max-width:1920px) {
+                                            line-height: 2vw;
+                                        }
+
+                                        @media all and (max-width:1024px) {
+                                            font-size: $content;
+                                        }
+                                    }
+                                }
+
+
+                            }
+
+
+                        }
+
+                        .right-box {
+                            width: 25%;
+                            position: relative;
+                            overflow: hidden;
+                            // width: 20vw;
+                            height: 100%;
+
+                            @media all and (max-width:1024px) {
+                                display: none;
+                            }
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .swiper {
+                            position: relative;
+                            width: 100%;
+                            display: none;
+
+                            @media all and (max-width:1024px) {
+                                display: block;
+                            }
+
+                            .swiper-wrapper {
+                                .swiper-slide {
+
+                                    @media all and (max-width:500px) {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                            .title-box {
+                                position: absolute;
+                                top: 0px;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                z-index: 99;
+
+                                .title {
+                                    margin: 0 auto;
+                                    text-align: center;
+
+                                    img {
+                                        width: 70vw;
+                                        @media (max-width:1024px) {
+                                            width: 62vw;
+                                        }
+                                    }
+
+                                }
+
+                                .content-box {
+                                    display: flex;
+                                    text-align: center;
+                                    justify-content: center;
+                                    margin: 0 auto;
+                                    margin-top: 3vw;
+                                    width: 100%;
+
+                                    .content {
+
+                                        @media all and (max-width:1024px) {
+                                            font-size: $content;
+                                            line-height: 6.5vw;
+                                            color: white;
+                                            font-family: '微軟正黑體';
+                                            letter-spacing: 0.2em;
+                                        }
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+
+                }
+
+                .video-tab-container {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    padding-top: 4vw;
+                    flex-direction: column;
+                    padding-bottom: 9vw;
+                    position: relative;
+                    display: none;
+
+                    @media all and (max-width:1024px) {
+                        padding-top: 11vw;
+                        padding-bottom: 13vw;
+                    }
+
+                    @media all and (max-width:500px) {
+                        padding-top: 4vw;
+                        padding-bottom: 20vw;
+                    }
+
+                    .title-box {
+                        width: 50%;
+                        display: flex;
+                        margin: 0 auto;
+
+                        @media all and (max-width:1024px) {
+                            flex-direction: column;
+                            width: 80%;
+                        }
+
+                        @media all and (max-width:500px) {
+                            width: 78%;
+                        }
+
+                        .left-box {
+                            display: flex;
+
+                            .title {
+                                display: flex;
+
+                                .icon-img {
+                                    display: block;
+                                    margin-right: 0.5vw;
+                                    padding-top: 0.2vw;
+
+                                    @media all and (max-width:1024px) {
+                                        padding-top: 1.7vw;
+                                        margin-right: 2vw;
+                                    }
+
+                                    img {
+                                        width: 85%;
+
+                                        @media all and (max-width:1440px) {
+                                            width: 65%;
+                                        }
+
+                                        @media all and (max-width:1024px) {
+                                            width: 100%;
+                                            display: block;
+                                        }
+
+                                        @media all and (max-width:500px) {
+                                            width: 4vw;
+                                        }
+                                    }
+                                }
+
+                                .title-text {
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 7vw;
+
+                                    @media all and (max-width:1440px) {
+                                        width: 10vw;
+                                    }
+
+                                    @media all and (max-width:1024px) {
+                                        width: 100%;
+
+                                    }
+
+                                    .title-zh {
+                                        display: flex;
+                                        color: #4e5e2c;
+                                        @include fontSize24pt();
+                                        font-family: 'Noto Serif TC', serif;
+                                        font-weight: bold;
+                                        letter-spacing: 0.1em;
+                                        text-align: left;
+
+                                        @media all and (max-width:1024px) {
+                                            font-size: $main-title
+                                        }
+                                    }
+
+                                    .title-line-moblie {
+                                        display: none;
+
+                                        @media all and (max-width:1024px) {
+                                            display: flex;
+                                            margin-top: 3vw;
+                                            margin-bottom: 4vw;
+                                        }
+
+                                        img {
+                                            width: 25vw;
+
+                                            @media all and (max-width:500px) {
+                                                width: 22vw;
+                                            }
+                                        }
+                                    }
+
+                                    .title-en {
+                                        display: flex;
+                                        text-align: left;
+                                        margin-top: 0.4vw;
+
+                                        @media all and (max-width:1024px) {
+                                            display: none;
+                                        }
+
+                                        img {
+                                            width: 89%;
+
+                                            @media all and (max-width:1440px) {
+                                                width: 77%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .line-img-box {
+                            display: flex;
+                            width: 0.3%;
+                            height: 4.5vw;
+                            padding-top: 0.2vw;
+                            margin-left: 1vw;
+                            margin-right: 1vw;
+
+                            @media all and (max-width:1440px) {
+                                height: 5vw;
+                                margin-right: 2vw;
+                            }
+
+                            @media all and (max-width:1024px) {
+                                display: none;
+                            }
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+
+                        .right-box {
+                            @include fontSize16pt();
+                            color: #383838;
+                            font-family: '微軟正黑體';
+                            letter-spacing: 0.2em;
+                            margin-left: 0.5vw;
+                            width: 100%;
+                            line-height: 1.6vw;
+
+                            @media all and (max-width:1440px) {
+                                line-height: 1.85vw;
+                            }
+
+                            @media all and (max-width:1024px) {
+                                font-size: $content;
+                                line-height: 7vw;
+                                padding-left: 5vw;
+                                margin-bottom: 5vw;
+                            }
+                        }
+                    }
+
+                    .video-box {
+                        display: flex;
+                        width: 50%;
+                        margin: 0 auto;
+                        flex-direction: column;
+                        margin-top: 6vw;
+
+                        @media all and (max-width:1024px) {
+                            width: 80%;
+                        }
+
+                        .video-title {
+                            display: flex;
+
+                            @media all and (max-width:1024px) {
+                                flex-direction: column;
+                            }
+
+                            .title {
+                                display: flex;
+                                color: #4e5e2c;
+                                @include fontSize24pt();
+                                font-family: 'Noto Serif TC', serif;
+                                font-weight: bold;
+                                letter-spacing: 0.1em;
+                                text-align: left;
+
+                                @media all and (max-width:1024px) {
+                                    font-size: $main-title;
+                                }
+                            }
+
+                            img {
+                                width: 0.2%;
+                                padding-top: 0.2vw;
+                                margin-left: 1vw;
+                                margin-right: 1vw;
+                            }
+
+                            .video-title-line-pc {
+                                @media all and (max-width:1024px) {
+                                    display: none;
+                                }
+                            }
+
+                            .video-title-line-moblie {
+                                display: none;
+                                margin-top: 3vw;
+                                margin-bottom: 4vw;
+
+                                @media all and (max-width:1024px) {
+                                    display: flex;
+                                }
+
+                                img {
+                                    width: 20vw;
+                                }
+
+                            }
+
+                            .introduce {
+                                @include fontSize16pt();
+                                color: #383838;
+                                font-family: '微軟正黑體';
+                                letter-spacing: 0.2em;
+                                margin-left: 0.5vw;
+                                line-height: 1.3vw;
+                                align-self: center;
+
+                                @media all and (max-width:1024px) {
+                                    font-size: $content;
+                                    line-height: 7vw;
+                                    margin-top: 0vw;
+                                }
+                            }
+
+                        }
+
+                        .video {
+
+                            margin-top: 1.5vw;
+
+                            @media all and (max-width:1024px) {
+                                margin-top: 5vw;
+                                margin-bottom: 7vw;
+                            }
+
+                            iframe {
+                                border-radius: 0.6vw;
+                                width: 100%;
+                                height: 30vw;
+
+                                @media all and (max-width:1024px) {
+                                    width: 80vw;
+                                    height: 49vw;
+                                    border-radius: 1.2vw;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .video-light-bg {
+                        position: absolute;
+                        top: -12vw;
+                        left: 0px;
+                        width: 25vw;
+                        z-index: -1;
+
+                        @media all and (max-width:1024px) {
+                            top: -1vw;
+                            left: -23vw;
+                            width: 65vw;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .light-box-bg {
+            position: fixed;
+            background-color: #3f4431;
+            width: 100%;
+            height: 100vh;
+            z-index: 99;
+            opacity: 0.9;
+
+            display: none;
+        }
+
+        .light-box {
+            position: fixed;
+            width: 80vw;
+            z-index: 999;
+            background-color: white;
+            border-radius: 4vw;
+            display: flex;
+            flex-direction: column;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: none;
+            opacity: 0;
+
+            .top-img-box {
+                display: block;
+                border-radius: 4vw;
+                font-size: 0px;
+                width: 100%;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    border-radius: 4vw;
+                    display: block;
+                    margin-top: -0.3vw;
+
+                }
+
+                .light-box-close {
+                    position: absolute;
+                    width: 7vw;
+                    right: 3vw;
+                    top: 3vw;
+                }
+            }
+
+            .bottom-box {
+                position: relative;
+                text-align: center;
+
+                .title-zh {
+                    color: #000000;
+                    font-family: 'Noto Serif TC';
+                    letter-spacing: 0.1em;
+                    font-size: $content;
+                    line-height: 7vw;
+                    margin-top: 5vw;
+                    margin-bottom: 3vw;
+                }
+
+                .title-en-box {
+                    display: flex;
+                    justify-content: center;
+
+                    .title-en {
+                        border-bottom: 2px solid #b6c396;
+                        padding-bottom: 3vw;
+                    }
+
+                    img {
+                        height: 8vw;
+                    }
+                }
+
+                .content {
+                    margin-top: 3vw;
+                    color: #000000;
+                    font-family: '微軟正黑體';
+                    letter-spacing: 0.1em;
+                    font-size: $content;
+                    line-height: 7vw;
+                    padding-bottom: 6vw;
+                    z-index: 22;
+
+                    .bottom-tree-shadow {
+                        position: absolute;
+                        bottom: 0px;
+                        right: -1vw;
+                        width: 50%;
+
+                    }
+                }
+
+
+            }
+        }
+
+        .energetic-box-lightbox {
+            display: none;
+            opacity: 0;
+        }
+
+        .perfect-box-lightbox {
+            display: none;
+            opacity: 0;
+        }
+
+        .unified-box-lightbox {
+            display: none;
+            opacity: 0;
+        }
+    }
+
+}
