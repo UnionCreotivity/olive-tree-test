@@ -557,6 +557,36 @@ require 'share_area/conn.php';
                     </div> -->
                 </div>
             </div>
+            
+          <div class="index-pop">
+             <div class="popup-inside">
+        <div class="backgrounds">
+          <div class="background"></div>
+          <div class="background background2"></div>
+          <div class="background background3"></div>
+          <div class="background background4"></div>
+          <div class="background background5"></div>
+          <div class="background background6"></div>
+        </div>
+      </div>
+      <div class="pop-content">
+        <div class="pop-close">
+          <img src="assets/images/pop-close.svg" alt="pop-close" />
+        </div>
+        <div class="pop-content-border">
+          <div class="pop-content-container">
+            <div class="content-image">
+              <img src="assets/images/pop-image@2x.webp" alt="pop-image@2x" />
+            </div>
+            <div class="content-title">大安區新生南路段</div>
+            <div class="content-small-title">設計概念</div>
+            <div class="content-para">
+              本案住家建築設計以「光線與情感的連結」作為空間創作的核心精神，透過開放式格局、大面開窗與自然材質的應用，將自然光引入每一處生活場景，讓空間不只是實用的容器，更是本案住家建築設計以「光線與情感的連結」作為空間創作的核心精神，透過開放式格局、大面開窗與自然材質的應用，將自然光引入每一處生活場景，讓空間不只是實用的容器，更是
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
             <?php
             //-- 共用cardInner --
