@@ -132,7 +132,6 @@
       font-size: 1.4vw;
       font-weight: bold;
       letter-spacing: 0.1em;
-      font-weight: 600;
       margin-top: 4%;
       color: #4e5e2c;
       @media screen and (max-width: 1024px) {
@@ -174,21 +173,29 @@
         background-color: #cecece;
         border-radius: 2vmax;
         margin-top: 4vw;
+        padding-top: 3vw;
+        padding-bottom: 4vw;
+        > div:last-child {
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
         @include itemWidthContainer();
         @media screen and (max-width: 1024px) {
           margin-top: 6vw;
+          padding-top: 8vw;
+          padding-bottom: 9vw;
         }
         .renewal-inner-item-title {
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          margin-top: 5vw;
+          // margin-top: 3vw;
           margin-bottom: 3vw;
           width: var(--itemWidth);
           @media screen and (max-width: 1024px) {
             justify-content: center;
-            margin-top: 8vw;
-            margin-bottom: 11vw;
+            // margin-top: 8vw;
+            margin-bottom: 8vw;
           }
           .renewal-inner-item-title-icon {
             position: relative;
@@ -238,7 +245,7 @@
           width: var(--itemWidth);
           gap: 1vw;
           @media screen and (max-width: 1024px) {
-            gap: 9vw;
+            gap: 7vw;
           }
           .renewal-inner-item-small-content {
             display: flex;
@@ -248,7 +255,7 @@
             @media screen and (max-width: 1024px) {
               justify-content: center;
               flex-direction: column;
-              gap: 9vw;
+              gap: 7vw;
             }
             .renewal-inner-item-small-img-size-3 {
               width: 37.25vw;
@@ -283,7 +290,7 @@
                 margin-top: 1vw;
                 @media screen and (max-width: 1024px) {
                   gap: 1.5vw;
-                  margin-top: 3vw;
+                  margin-top: 4vw;
                 }
                 .icon {
                   width: 0.5vw;
@@ -311,7 +318,7 @@
           width: var(--itemWidth);
           text-align: justify;
           margin-top: 2vw;
-          margin-bottom: 5vw;
+          // margin-bottom: 4vw;
           line-height: 1.5vw;
           font-family: "微軟正黑體";
           letter-spacing: 0.1em;
@@ -330,11 +337,11 @@
           display: flex;
           align-items: center;
           gap: 3vw;
-          margin-bottom: 3vw;
+          margin-bottom: 2vw;
           @media screen and (max-width: 1024px) {
             justify-content: center;
             flex-direction: column-reverse;
-            gap: 9vw;
+            gap: 7vw;
             margin-bottom: 9vw;
           }
           .renewal-inner-item-txt-content {
@@ -373,7 +380,7 @@
           display: flex;
           align-items: center;
           flex-direction: column;
-          margin-bottom: 5vw;
+          margin-bottom: 4vw;
           .renewal-inner-item-video {
             display: flex;
             align-items: center;
@@ -416,6 +423,9 @@
         }
         .flex-reverse {
           flex-direction: row-reverse;
+          @media screen and (max-width: 1024px) {
+            flex-direction: column;
+          }
         }
       }
       .bottom-box {

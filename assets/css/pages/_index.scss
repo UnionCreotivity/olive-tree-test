@@ -154,7 +154,7 @@ body {
         );
         mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         mask-composite: xor;
-        padding: 2px;
+        padding: 0.1em;
         border-radius: 4vmax;
         animation: gradientShift 3s linear infinite;
         // animation: rotate 8s linear infinite;
@@ -292,6 +292,9 @@ body {
       width: 84.5vw;
       height: 80vh;
       margin: auto;
+    }
+    @include mobile {
+      height: 70vh;
     }
     &.active {
       box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.75);
@@ -448,7 +451,9 @@ body {
       height: 80vh;
       margin: auto;
     }
-
+    @include mobile {
+      height: 70vh;
+    }
     .pop-close {
       position: absolute;
       top: -12%;
@@ -527,9 +532,9 @@ body {
       .content-title {
         @include fontSize30pt();
         letter-spacing: 0.1em;
-        font-weight: 500;
         margin-top: 1vw;
         margin-bottom: 0.5vw;
+        font-family: "Noto Sans TC", sans-serif;
         color: #4e5e2c;
         @media screen and (max-width: 1024px) {
           font-size: 5.5vw;
@@ -557,6 +562,9 @@ body {
         @media (max-width: 1024px) {
           text-align: center;
           font-size: 3.7vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }
