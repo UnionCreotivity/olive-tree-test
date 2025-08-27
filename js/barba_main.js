@@ -9,6 +9,8 @@ import aboutJS from "./about.js?1";
 import news_contentJS from "./news_content.js";
 import contactJS from "./contact.js";
 import loadingJS from "./loading.js";
+import renewalJS from "./renewal.js";
+import renewal_innerJS from "./renewal_inner.js";
 
 import { gsap } from "./gsap/esm/index.js";
 import { ScrollTrigger } from "./gsap/esm/ScrollTrigger.js";
@@ -159,7 +161,7 @@ function indexAnimation() {
 
           phoneCardMove();
           phoneCardSwitch();
-          $(".popup").addClass("active");
+          $(".index-pop").addClass("active");
           $(".popup-inside").addClass("active");
           $(".background").addClass("active");
           $(".background6").addClass("active");
@@ -1495,7 +1497,7 @@ barba.init({
         if (
           (data.current.url.path.indexOf("index") != -1 ||
             data.current.url.path == "/") &&
-          data.next.url.path.indexOf("activity") == -1 &&
+          data.next.url.path.indexOf("renewal") == -1 &&
           data.next.url.path.indexOf("contact") == -1
         ) {
           await indexBeforeEnter();
@@ -1721,7 +1723,13 @@ barba.init({
     {
       namespace: "renewal",
       beforeEnter(data) {
-        news_contentJS();
+        renewalJS();
+      },
+    },
+    {
+      namespace: "renewal_inner",
+      beforeEnter(data) {
+        renewal_innerJS();
       },
     },
   ],

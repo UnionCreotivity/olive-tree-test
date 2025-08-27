@@ -15,6 +15,24 @@ body {
   //   height: 100vh;
 }
 
+@property --startColor {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgba(101, 122, 92, 1);
+}
+
+@property --midColor {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgba(255, 255, 255, 0);
+}
+
+@property --endColor {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgba(178, 191, 148, 1);
+}
+
 .index-body {
   .news-item {
     position: absolute;
@@ -99,10 +117,76 @@ body {
       align-self: center;
       align-content: center;
       z-index: 99;
-      border: 1.5px solid #fff;
+      // border: 1.5px solid #fff;
       line-height: 6vw;
       padding: 1vw 4.5vw;
       border-radius: 4vw;
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   left: 0;
+      //   right: 0;
+      //   top: 0;
+      //   bottom: 0;
+      //   background-image: linear-gradient(
+      //     to right,
+      //     rgba(101, 122, 92, 1) 0%,
+      //     rgba(255, 255, 255, 0) 80%,
+      //     rgba(178, 191, 148, 1) 100%
+      //   );
+      //   width: 100%;
+      //   height: 100%;
+      //   animation: rotate 8s linear infinite;
+      // }
+
+      .news-item-border {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        // background: var(--borderGradient);
+        background: linear-gradient(
+          to right,
+          var(--startColor) 0%,
+          var(--midColor) 80%,
+          var(--endColor) 100%
+        );
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: xor;
+        padding: 2px;
+        border-radius: 4vmax;
+        animation: gradientShift 3s linear infinite;
+        // animation: rotate 8s linear infinite;
+      }
+      @keyframes gradientShift {
+        0% {
+          --startColor: rgba(101, 122, 92, 1);
+          --midColor: rgba(255, 255, 255, 0);
+          --endColor: rgba(178, 191, 148, 1);
+        }
+        50% {
+          --startColor: rgb(204, 233, 138);
+          --midColor: rgba(101, 122, 92, 1);
+          --endColor: rgb(26, 41, 21);
+        }
+        100% {
+          --startColor: rgba(101, 122, 92, 1);
+          --midColor: rgba(255, 255, 255, 0);
+          --endColor: rgba(178, 191, 148, 1);
+        }
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      //  linear-gradient(to right, rgba(101,122,92,1) 0%,rgba(255,255,255,0) 80%,rgba(178,191,148,1) 100%);
     }
 
     a {
@@ -177,9 +261,11 @@ body {
   //   background-color: red;
   margin: auto;
   z-index: 999;
-  @media screen and (max-width: 900px) {
-    width: 80vw;
-    height: 100vw;
+  visibility: hidden;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5);
   }
   &.active {
     opacity: 1;
@@ -200,6 +286,13 @@ body {
     border-radius: 0.75vmax;
     box-shadow: 0 0 0 black;
     transition: box-shadow 0.5s ease 0.7s, border-radius 0.35s ease 0.7s;
+    @media screen and (max-width: 1024px) {
+      right: 0;
+      bottom: 0;
+      width: 84.5vw;
+      height: 80vh;
+      margin: auto;
+    }
     &.active {
       box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.75);
     }
@@ -222,7 +315,11 @@ body {
       right: var(--offset);
       bottom: var(--offset);
       top: var(--offset);
-      background: linear-gradient(to right, #504bff, #4cfa63);
+      background: linear-gradient(
+        to right,
+        rgba(79, 90, 54, 1) 0%,
+        rgba(189, 203, 150, 1) 100%
+      );
       transform: scale(0);
       transition: all 0.5s ease 0s;
       border-radius: 0.75vmax;
@@ -241,7 +338,11 @@ body {
       right: var(--offset);
       bottom: var(--offset);
       top: var(--offset);
-      background: linear-gradient(to right, #6665ff, #69fa7f);
+      background: linear-gradient(
+        to right,
+        rgba(103, 122, 83, 1) 0%,
+        rgba(194, 209, 168, 1) 100%
+      );
       transform: scale(0);
       transition: all 0.5s ease 0.1s;
       &.back {
@@ -256,7 +357,11 @@ body {
       right: var(--offset);
       bottom: var(--offset);
       top: var(--offset);
-      background: linear-gradient(to right, #8583ff, #85fa99);
+      background: linear-gradient(
+        to right,
+        rgba(125, 154, 111, 1) 0%,
+        rgba(198, 216, 186, 1) 100%
+      );
       z-index: 2;
       transition: all 0.5s ease 0.2s;
       &.back {
@@ -271,7 +376,11 @@ body {
       right: var(--offset);
       bottom: var(--offset);
       top: var(--offset);
-      background: linear-gradient(to right, #aaaaff, #a7fab7);
+      background: linear-gradient(
+        to right,
+        rgba(147, 185, 138, 1) 0%,
+        rgba(203, 222, 203, 1) 100%
+      );
       z-index: 3;
       transition: all 0.5s ease 0.3s;
       &.back {
@@ -286,7 +395,11 @@ body {
       right: var(--offset);
       bottom: var(--offset);
       top: var(--offset);
-      background: linear-gradient(to right, #c9c8ff, #c3fad1);
+      background: linear-gradient(
+        to right,
+        rgba(170, 216, 166, 1) 0%,
+        rgba(207, 228, 221, 1) 100%
+      );
       z-index: 4;
       transition: all 0.5s ease 0.4s;
       &.back {
@@ -329,9 +442,13 @@ body {
     &.back {
       transition: all 0.35s ease 0s;
     }
-    @include tablet() {
+    @media screen and (max-width: 1024px) {
       padding-block: 10%;
+      width: 84.5vw;
+      height: 80vh;
+      margin: auto;
     }
+
     .pop-close {
       position: absolute;
       top: -12%;
@@ -347,9 +464,16 @@ body {
         height: 100%;
         padding: 32%;
       }
-      @include tablet() {
-        top: -10%;
-        right: -9%;
+      @media screen and (max-width: 1024px) {
+        position: fixed;
+        top: 3.5vw;
+        right: 7%;
+        width: 7vw;
+        height: 7vw;
+      }
+      @include mobile {
+        top: 4.75vw;
+        right: 7%;
         width: 9vw;
         height: 9vw;
       }
@@ -385,6 +509,9 @@ body {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+      @media screen and (max-width: 1024px) {
+        align-items: center;
+      }
       .content-image {
         width: 100%;
         display: flex;
@@ -392,24 +519,30 @@ body {
           width: 100%;
           object-fit: cover;
           border-radius: 1vmax;
+          @media screen and (max-width: 1024px) {
+            border-radius: 3vmax;
+          }
         }
       }
       .content-title {
         @include fontSize30pt();
         letter-spacing: 0.1em;
         font-weight: 500;
-        line-height: 2;
-        margin-top: 1%;
+        margin-top: 1vw;
+        margin-bottom: 0.5vw;
         color: #4e5e2c;
         @media screen and (max-width: 1024px) {
           font-size: 5.5vw;
+          margin-top: 4vw;
+          margin-bottom: 3vw;
         }
       }
       .content-small-title {
         @include fontSize16pt();
         font-family: "微軟正黑體";
         line-height: 2;
-        margin-bottom: 0.5%;
+        margin-bottom: 0.25vw;
+        letter-spacing: 0.1em;
         color: #595959;
         @media (max-width: 1024px) {
           font-size: 3.7vw;
@@ -419,8 +552,10 @@ body {
         @include fontSize16pt();
         font-family: "微軟正黑體";
         line-height: 2;
+        letter-spacing: 0.1em;
         color: #595959;
         @media (max-width: 1024px) {
+          text-align: center;
           font-size: 3.7vw;
         }
       }

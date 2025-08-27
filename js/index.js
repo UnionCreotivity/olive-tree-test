@@ -507,6 +507,7 @@ export default function indexJS() {
 
     $(".menu-box .menu a").click(function (e) {
       // e.preventDefault();
+      console.log("sss");
       $("#olive-tree").addClass("checkCard");
       let menu_btn = document.querySelector(".menu-btn");
       let menu_box = document.querySelector(".menu-box");
@@ -1721,7 +1722,7 @@ function popUpClose() {
   const popButton = $(".pop-close");
 
   popButton.click(function () {
-    $(".popup").removeClass("active");
+    $(".index-pop").removeClass("active");
     $(".popup-inside").removeClass("active").addClass("back");
     $(".background").removeClass("active").addClass("back");
     $(".background6").removeClass("active").addClass("back");

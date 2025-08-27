@@ -85,6 +85,7 @@ require 'share_area/conn.php';
                 </div>
 
                 <div class="news-item-moblie">
+                    <div class="news-item-border"></div>
                     <a href="activity.php">
                         <div class="news-title-fixed">
                             News

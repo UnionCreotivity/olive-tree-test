@@ -1,4 +1,8 @@
 .renewal-body {
+  background-image: url(/assets/images/renew/renewal-pure-bg@2x.webp);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
   .renewal-main {
     width: 100%;
     display: flex;
@@ -87,10 +91,173 @@
       .content {
         width: 100%;
         position: relative;
+        margin-top: 4%;
         .content-bg {
           position: absolute;
-          left: 0;
+          left: 50%;
           top: 0;
+          transform: translate(-50%, 0%);
+          pointer-events: none;
+          width: 134.25%;
+          img {
+            width: 100%;
+          }
+          @media screen and (max-width: 1024px) {
+            width: 100%;
+          }
+        }
+        .content-list {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          z-index: 2;
+          width: 80%;
+          gap: 2vw;
+          margin-top: 23%;
+          margin-inline: auto;
+          padding-bottom: 8%;
+          @media screen and (max-width: 1024px) {
+            width: 87%;
+            gap: 0vw;
+            align-items: flex-start;
+            margin-bottom: 25vw;
+            margin-top: 27vw;
+          }
+          @include mobile {
+            margin-bottom: 37vw;
+          }
+          .content-item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            cursor: pointer;
+            .content-item-img {
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              a {
+                height: 100%;
+                width: 100%;
+              }
+            }
+
+            &:nth-child(3n + 2) {
+              margin-top: -20%;
+              @media screen and (max-width: 1024px) {
+                margin-top: 0;
+              }
+              .content-item-img {
+                mask-image: url("/assets/images/renew/renewal-item-mask-reverse@2x.webp");
+              }
+            }
+            &:nth-child(3n + 3) {
+              .content-item-img {
+                mask-image: url("/assets/images/renew/renewal-item-mask-reverse@2x.webp");
+                @media screen and (max-width: 1024px) {
+                  mask-image: url("/assets/images/renew/renewal-item-mask-2@2x.webp");
+                }
+              }
+            }
+            &:nth-child(2n + 1) {
+              @media screen and (max-width: 1024px) {
+                align-items: flex-end;
+                margin-top: -6%;
+                .content-item-img {
+                  mask-image: url("/assets/images/renew/renewal-item-mask-2@2x.webp");
+                }
+                .content-item-title {
+                  margin-right: 5%;
+                }
+              }
+            }
+            &:nth-child(2n) {
+              @media screen and (max-width: 1024px) {
+                align-items: flex-start;
+                margin-top: 3%;
+                .content-item-img {
+                  mask-image: url("/assets/images/renew/renewal-item-mask-reverse@2x.webp");
+                }
+                .content-item-title {
+                  margin-left: 5%;
+                }
+              }
+            }
+            .content-item-img {
+              position: relative;
+              width: 20vw;
+              height: 20vw;
+              mask-image: url("/assets/images/renew/renewal-item-mask-2@2x.webp");
+              mask-repeat: no-repeat;
+              mask-position: center;
+              mask-size: 100% 100%;
+              overflow: hidden;
+              img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+              @media screen and (max-width: 1024px) {
+                width: 40vw;
+                height: 40vw;
+              }
+              .hover-item {
+                @include fontSize24pt();
+                letter-spacing: 0.1em;
+                text-align: center;
+                line-height: 2;
+                font-family: "Noto Serif TC", serif;
+                font-weight: 500;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                color: white;
+                background-color: #4f563fc7;
+                transition: all 0.3s ease-in-out;
+                .hover-item-text {
+                  width: 70%;
+                  text-align: center;
+                  @media screen and (max-width: 1024px) {
+                    width: 100%;
+                  }
+                }
+                @media screen and (max-width: 1024px) {
+                  font-size: 3.9vw;
+                  text-align: center;
+                  .hover-item-text {
+                    width: 75%;
+                    text-align: center;
+                  }
+                }
+              }
+              &:hover {
+                .hover-item {
+                  opacity: 1;
+                  transition: all 0.3s ease-in-out;
+                }
+              }
+            }
+            .content-item-title {
+              @include fontSize24pt();
+              color: #595959;
+              letter-spacing: 0.1em;
+              font-family: "Noto Serif TC", serif;
+              font-weight: 600;
+              margin-top: 3%;
+              @media screen and (max-width: 1024px) {
+                font-size: 3.9vw;
+                text-align: center;
+              }
+            }
+          }
         }
       }
     }
