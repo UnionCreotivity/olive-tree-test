@@ -48,21 +48,104 @@ export default function renewalJS() {
   }
   newsTitleAni();
 
-  function itemAni() {
-    const item = document.querySelectorAll(".content-item");
-    item.forEach((item) => {
+  function itemAniPc() {
+    const item3n1 = $(".content-item:nth-child(3n+1)");
+    const item3n = $(".content-item:nth-child(3n)");
+    const item3n2 = $(".content-item:nth-child(3n+2)");
+
+    // document.querySelectorAll(".content-item");
+    item3n1.each(function (i, item) {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: item,
-          start: "top 100%",
+          start: "top bottom",
+          end: "75% bottom",
+          scrub: 1,
         },
       });
-      tl.from(item, {
-        y: is_Pc ? 200 : 100,
-        duration: 1,
-        ease: "power1.inOut",
+
+      tl.from($(item).children(".content-item-container"), {
+        rotate: "-15",
+        opacity: 0,
+        x: "-50%",
+      });
+    });
+
+    item3n.each(function (i, item) {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: "top bottom",
+          end: "75% bottom",
+          scrub: 1,
+        },
+      });
+
+      tl.from($(item).children(".content-item-container"), {
+        rotate: "15",
+        opacity: 0,
+        x: "50%",
+      });
+    });
+
+    item3n2.each(function (i, item) {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: "top bottom",
+          end: "75% bottom",
+          scrub: 1,
+        },
+      });
+
+      tl.from($(item).children(".content-item-container"), {
+        rotate: "15",
+        opacity: 0,
+        x: "50%",
       });
     });
   }
-  itemAni();
+
+  const itemAniMb = () => {
+    const item2n = $(".content-item:nth-child(2n)");
+    const item2n1 = $(".content-item:nth-child(2n+1)");
+    item2n.each(function (i, item) {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: "25% 100%",
+          end: "bottom 100%",
+          scrub: 1,
+        },
+      });
+
+      tl.from($(item).children(".content-item-container"), {
+        rotate: "15",
+        opacity: 0,
+        x: "50%",
+      });
+    });
+    item2n1.each(function (i, item) {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: "25% 100%",
+          end: "bottom 100%",
+          scrub: 1,
+        },
+      });
+
+      tl.from($(item).children(".content-item-container"), {
+        rotate: "-15",
+        opacity: 0,
+        x: "-50%",
+      });
+    });
+  };
+
+  if (is_Pc) {
+    itemAniPc();
+  } else {
+    itemAniMb();
+  }
 }

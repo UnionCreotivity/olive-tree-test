@@ -1497,7 +1497,6 @@ barba.init({
         if (
           (data.current.url.path.indexOf("index") != -1 ||
             data.current.url.path == "/") &&
-          data.next.url.path.indexOf("renewal") == -1 &&
           data.next.url.path.indexOf("contact") == -1
         ) {
           await indexBeforeEnter();
@@ -1723,6 +1722,7 @@ barba.init({
     {
       namespace: "renewal",
       beforeEnter(data) {
+        console.log("renewal");
         renewalJS();
       },
     },

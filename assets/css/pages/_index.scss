@@ -154,7 +154,7 @@ body {
         );
         mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         mask-composite: xor;
-        padding: 0.1em;
+        padding: 0.075em;
         border-radius: 4vmax;
         animation: gradientShift 3s linear infinite;
         // animation: rotate 8s linear infinite;

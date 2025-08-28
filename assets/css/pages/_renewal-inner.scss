@@ -33,10 +33,13 @@
       .swiper-button-next {
         width: 3vw;
         @media screen and (max-width: 1024px) {
-          width: 5.5vw;
+          width: 7vw;
         }
         img {
           width: 100%;
+          @include mobile {
+            width: 91.5%;
+          }
         }
         &::after {
           content: unset;
@@ -53,15 +56,15 @@
           }
         }
         .cut-top-prev {
-          left: 2%;
+          left: 2vw;
           @media screen and (max-width: 1024px) {
-            left: 5%;
+            left: 6vw;
           }
         }
         .cut-top-next {
-          right: 2%;
+          right: 2vw;
           @media screen and (max-width: 1024px) {
-            right: 5%;
+            right: 6vw;
           }
         }
       }
@@ -77,6 +80,9 @@
           width: 86%;
           margin-top: 5.5vw;
           padding-bottom: 12vw;
+        }
+        @include mobile {
+          padding-bottom: 20vw;
         }
         .swiper-slide {
           opacity: 0.5;
@@ -97,7 +103,7 @@
           width: 6vw;
           @media screen and (max-width: 1024px) {
             width: 16.75vw;
-            top: 22vw;
+            top: 25vw;
             left: 6vw;
           }
         }
@@ -108,7 +114,7 @@
           width: 6vw;
           @media screen and (max-width: 1024px) {
             width: 16.75vw;
-            top: 22vw;
+            top: 25vw;
             left: unset;
             right: 6vw;
           }
@@ -169,8 +175,6 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        // width: 72.75%;
-        background-color: #cecece;
         border-radius: 2vmax;
         margin-top: 4vw;
         padding-top: 3vw;
@@ -197,6 +201,9 @@
             // margin-top: 8vw;
             margin-bottom: 8vw;
           }
+          @include mobile {
+            margin-bottom: 10vw;
+          }
           .renewal-inner-item-title-icon {
             position: relative;
             width: 2.5vw;
@@ -208,7 +215,7 @@
               left: 50%;
               top: 50%;
               transform: translate(-50%, -50%);
-              font-family: "微軟正黑體";
+              font-family: "Noto Serif TC", serif;
               letter-spacing: 0.1em;
               color: white;
               @include fontSize16pt();
@@ -226,7 +233,7 @@
             @include fontSize16pt();
             @media screen and (max-width: 1024px) {
               font-size: 3.7vw;
-              font-weight: 500;
+              font-weight: 600;
               margin-left: 2vw;
             }
           }
@@ -319,15 +326,13 @@
           text-align: justify;
           margin-top: 2vw;
           // margin-bottom: 4vw;
-          line-height: 1.5vw;
+          line-height: 2;
           font-family: "微軟正黑體";
           letter-spacing: 0.1em;
           color: #595959;
           @include fontSize16pt();
           @media screen and (max-width: 1024px) {
             font-size: 3.7vw;
-            font-weight: 500;
-            line-height: 2;
             margin-top: 10vw;
             margin-bottom: 9vw;
           }
@@ -347,7 +352,7 @@
           .renewal-inner-item-txt-content {
             width: 28.5vw;
             text-align: justify;
-            line-height: 1.5vw;
+            line-height: 2;
             font-family: "微軟正黑體";
             letter-spacing: 0.1em;
             color: #595959;
@@ -386,9 +391,14 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 20vw;
-            background-color: red;
-            border-radius: 2vmax;
+            height: 33vw;
+            @media screen and (max-width: 1024px) {
+              height: 38.5vw;
+            }
+            iframe {
+              width: 100%;
+              height: 100%;
+            }
           }
           .renewal-inner-item-video-title {
             width: 100%;
@@ -424,7 +434,7 @@
         .flex-reverse {
           flex-direction: row-reverse;
           @media screen and (max-width: 1024px) {
-            flex-direction: column;
+            flex-direction: column-reverse;
           }
         }
       }
