@@ -91,15 +91,14 @@ export default function renewal_innerJS() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: item,
-          start: "top bottom",
-          end: "25% bottom",
-          scrub: 1,
+          start: is_Pc ? "10% bottom" : "10% bottom",
         },
       });
       tl.from(item, {
-        y: is_Pc ? 150 : 75,
-        duration: 1,
-        ease: "power1.inOut",
+        y: is_Pc ? 250 : 150,
+        opacity: 0,
+        ease: "power3.out",
+        duration: 1.5,
       });
     });
   }

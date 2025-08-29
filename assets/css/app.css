@@ -1003,15 +1003,18 @@ body {
   right: 0;
   width: 49vw;
   height: 31.5vw;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.1);
   margin: auto;
-  z-index: 999;
+  z-index: 9999;
   visibility: hidden;
 }
 @media screen and (max-width: 1024px) {
   .index-pop {
     width: 100%;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 .index-pop.active {
@@ -1026,9 +1029,12 @@ body {
 .index-pop .popup-inside {
   position: absolute;
   left: 0;
+  right: 0;
   top: 0;
-  height: 100%;
-  width: 100%;
+  bottom: 0;
+  width: 49vw;
+  height: 31.5vw;
+  margin: auto;
   overflow: hidden;
   border-radius: 0.75vmax;
   box-shadow: 0 0 0 black;
@@ -1049,7 +1055,7 @@ body {
   }
 }
 .index-pop .popup-inside.active {
-  box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.1);
 }
 .index-pop .popup-inside.back {
   transition: all 0.5s ease 0s;
@@ -1165,8 +1171,12 @@ body {
   justify-content: center;
   opacity: 0;
   transition: all 0.35s ease 0.75s;
-  padding-block: 4%;
+  padding-block: 2%;
+  padding-top: 3%;
   z-index: 10;
+  width: 49vw;
+  height: 31.5vw;
+  margin: auto;
 }
 .index-pop .pop-content.back {
   transition: all 0.35s ease 0s;
@@ -1192,7 +1202,6 @@ body {
   height: 3.5vw;
   border-radius: 50%;
   background-color: #4f563f;
-  box-shadow: 0px 0px 10px black;
   cursor: pointer;
 }
 .index-pop .pop-content .pop-close img {
@@ -1203,7 +1212,7 @@ body {
 @media screen and (max-width: 1024px) {
   .index-pop .pop-content .pop-close {
     position: fixed;
-    top: 3.5vw;
+    top: 3.55vw;
     right: 7%;
     width: 7vw;
     height: 7vw;
@@ -1211,7 +1220,7 @@ body {
 }
 @media (max-width: 500px) {
   .index-pop .pop-content .pop-close {
-    top: 4.75vw;
+    top: 4.85vw;
     right: 7%;
     width: 9vw;
     height: 9vw;
@@ -1275,7 +1284,8 @@ body {
   letter-spacing: 0.1em;
   margin-top: 1vw;
   margin-bottom: 0.5vw;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Noto Serif TC", serif;
+  font-weight: bold;
   color: #4e5e2c;
 }
 @media all and (max-width: 1440px) {
@@ -8053,10 +8063,10 @@ body {
 }
 
 .renewal-body {
-  background-image: url(/assets/images/renew/renewal-pure-bg@2x.webp);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100%;
+  background-image: linear-gradient(to bottom, rgba(223, 223, 223, 0) 0%, rgba(223, 223, 223, 0.34) 34%, rgb(223, 223, 223) 100%);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 .renewal-body .renewal-main {
   width: 100%;
@@ -8153,6 +8163,13 @@ body {
   width: 100%;
   position: relative;
   margin-top: 4%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+  .renewal-body .renewal-main .renewal-container .content {
+    margin-top: 13vw;
+  }
 }
 .renewal-body .renewal-main .renewal-container .content .content-bg {
   position: absolute;
@@ -8170,6 +8187,25 @@ body {
     width: 100%;
   }
 }
+.renewal-body .renewal-main .renewal-container .content .content-bg-border {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0%);
+  pointer-events: none;
+  width: 133vw;
+  height: 133vw;
+  background-repeat: no-repeat;
+  background-size: 100% 40vw;
+  background-image: linear-gradient(to bottom, rgb(178, 191, 148) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 50%;
+}
+@media screen and (max-width: 1024px) {
+  .renewal-body .renewal-main .renewal-container .content .content-bg-border {
+    width: 185vw;
+    height: 133vw;
+  }
+}
 .renewal-body .renewal-main .renewal-container .content .content-list {
   position: relative;
   display: flex;
@@ -8177,17 +8213,16 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   z-index: 2;
-  width: 80%;
-  gap: 2vw;
+  width: 75%;
+  gap: 12vw 5vw;
   margin-top: 20%;
-  margin-inline: auto;
-  padding-bottom: 8%;
+  padding-bottom: 17vw;
 }
 @media screen and (max-width: 1024px) {
   .renewal-body .renewal-main .renewal-container .content .content-list {
     width: 87%;
-    gap: 0vw;
     align-items: flex-start;
+    gap: 20vw;
     margin-bottom: 25vw;
     margin-top: 27vw;
   }
@@ -8203,7 +8238,38 @@ body {
   align-items: center;
   flex-direction: column;
   cursor: pointer;
-  transform-origin: left bottom;
+}
+.renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(3n+3) .content-item-container {
+  margin-bottom: -12vw;
+}
+@media screen and (max-width: 1024px) {
+  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(3n+3) .content-item-container {
+    margin-bottom: 0vw;
+  }
+}
+.renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(6n+4) {
+  margin-left: 4vw;
+}
+@media screen and (max-width: 1024px) {
+  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(6n+4) {
+    margin-left: 0;
+  }
+}
+.renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(6n+5) .content-item-container {
+  margin-left: 33%;
+}
+@media screen and (max-width: 1024px) {
+  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(6n+5) .content-item-container {
+    margin-left: 0;
+  }
+}
+.renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(6n+6) .content-item-container {
+  margin-left: 50%;
+}
+@media screen and (max-width: 1024px) {
+  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(6n+6) .content-item-container {
+    margin-left: 0;
+  }
 }
 .renewal-body .renewal-main .renewal-container .content .content-list .content-item .content-item-container {
   width: 100%;
@@ -8212,6 +8278,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  will-change: transform;
 }
 .renewal-body .renewal-main .renewal-container .content .content-list .content-item .content-item-img {
   display: flex;
@@ -8239,41 +8306,36 @@ body {
           mask-image: url("/assets/images/renew/renewal-item-mask-reverse@2x.webp");
 }
 @media screen and (max-width: 1024px) {
-  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(3n+3) .content-item-img {
-    -webkit-mask-image: url("/assets/images/renew/renewal-item-mask-2@2x.webp");
-            mask-image: url("/assets/images/renew/renewal-item-mask-2@2x.webp");
+  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(2n+1) {
+    margin-left: auto;
   }
-}
-@media screen and (max-width: 1024px) {
   .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(2n+1) .content-item-container {
-    align-items: flex-end;
-    margin-top: -6%;
+    align-items: flex-start;
   }
   .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(2n+1) .content-item-container .content-item-img {
-    -webkit-mask-image: url("/assets/images/renew/renewal-item-mask-2@2x.webp");
-            mask-image: url("/assets/images/renew/renewal-item-mask-2@2x.webp");
-  }
-  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(2n+1) .content-item-container .content-item-title {
-    margin-right: 5%;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(2n) .content-item-container {
-    align-items: flex-start;
-    margin-top: 11%;
-  }
-  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(2n) .content-item-container .content-item-img {
     -webkit-mask-image: url("/assets/images/renew/renewal-item-mask-reverse@2x.webp");
             mask-image: url("/assets/images/renew/renewal-item-mask-reverse@2x.webp");
   }
-  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(2n) .content-item-container .content-item-title {
-    margin-left: 5%;
+  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(2n+1) .content-item-container .content-item-title {
+    margin-left: 4%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(2n+2) .content-item-container {
+    align-items: flex-end;
+  }
+  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(2n+2) .content-item-container .content-item-img {
+    -webkit-mask-image: url("/assets/images/renew/renewal-item-mask-2@2x.webp");
+            mask-image: url("/assets/images/renew/renewal-item-mask-2@2x.webp");
+  }
+  .renewal-body .renewal-main .renewal-container .content .content-list .content-item:nth-child(2n+2) .content-item-container .content-item-title {
+    margin-right: 4%;
   }
 }
 .renewal-body .renewal-main .renewal-container .content .content-list .content-item .content-item-img {
   position: relative;
-  width: 20vw;
-  height: 20vw;
+  width: 16.3vw;
+  height: 16.3vw;
   -webkit-mask-image: url("/assets/images/renew/renewal-item-mask-2@2x.webp");
           mask-image: url("/assets/images/renew/renewal-item-mask-2@2x.webp");
   -webkit-mask-repeat: no-repeat;
@@ -8293,8 +8355,8 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .renewal-body .renewal-main .renewal-container .content .content-list .content-item .content-item-img {
-    width: 40vw;
-    height: 40vw;
+    width: 63vw;
+    height: 63vw;
   }
 }
 .renewal-body .renewal-main .renewal-container .content .content-list .content-item .content-item-img .hover-item {
@@ -8316,7 +8378,7 @@ body {
   justify-content: center;
   opacity: 0;
   color: white;
-  background-color: rgba(79, 86, 63, 0.7803921569);
+  background-color: rgba(79, 86, 63, 0.9);
   transition: all 0.3s ease-in-out;
 }
 @media all and (max-width: 1440px) {
@@ -8355,7 +8417,7 @@ body {
   letter-spacing: 0.1em;
   font-family: "Noto Serif TC", serif;
   font-weight: 600;
-  margin-top: 2%;
+  margin-top: 3%;
 }
 @media all and (max-width: 1440px) {
   .renewal-body .renewal-main .renewal-container .content .content-list .content-item .content-item-title {

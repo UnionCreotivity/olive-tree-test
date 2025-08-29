@@ -49,103 +49,30 @@ export default function renewalJS() {
   newsTitleAni();
 
   function itemAniPc() {
-    const item3n1 = $(".content-item:nth-child(3n+1)");
-    const item3n = $(".content-item:nth-child(3n)");
-    const item3n2 = $(".content-item:nth-child(3n+2)");
+    const item = $(".content-list .content-item");
 
-    // document.querySelectorAll(".content-item");
-    item3n1.each(function (i, item) {
+    item.each(function (i, item) {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: item,
-          start: "top bottom",
-          end: "75% bottom",
-          scrub: 1,
+          start: is_Pc ? "top bottom" : "5% bottom",
         },
       });
-
-      tl.from($(item).children(".content-item-container"), {
-        rotate: "-15",
-        opacity: 0,
-        x: "-50%",
-      });
-    });
-
-    item3n.each(function (i, item) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          start: "top bottom",
-          end: "75% bottom",
-          scrub: 1,
+      tl.fromTo(
+        item,
+        { y: is_Pc ? 400 : 200 },
+        { y: 0, duration: 1.5, ease: "power4.out" }
+      ).from(
+        $(item).find("img")[0],
+        {
+          scale: 1.5,
+          duration: 1.25,
+          ease: "power1.out",
         },
-      });
-
-      tl.from($(item).children(".content-item-container"), {
-        rotate: "15",
-        opacity: 0,
-        x: "50%",
-      });
-    });
-
-    item3n2.each(function (i, item) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          start: "top bottom",
-          end: "75% bottom",
-          scrub: 1,
-        },
-      });
-
-      tl.from($(item).children(".content-item-container"), {
-        rotate: "15",
-        opacity: 0,
-        x: "50%",
-      });
+        "<+0.1"
+      );
     });
   }
 
-  const itemAniMb = () => {
-    const item2n = $(".content-item:nth-child(2n)");
-    const item2n1 = $(".content-item:nth-child(2n+1)");
-    item2n.each(function (i, item) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          start: "25% 100%",
-          end: "bottom 100%",
-          scrub: 1,
-        },
-      });
-
-      tl.from($(item).children(".content-item-container"), {
-        rotate: "15",
-        opacity: 0,
-        x: "50%",
-      });
-    });
-    item2n1.each(function (i, item) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          start: "25% 100%",
-          end: "bottom 100%",
-          scrub: 1,
-        },
-      });
-
-      tl.from($(item).children(".content-item-container"), {
-        rotate: "-15",
-        opacity: 0,
-        x: "-50%",
-      });
-    });
-  };
-
-  if (is_Pc) {
-    itemAniPc();
-  } else {
-    itemAniMb();
-  }
+  itemAniPc();
 }
