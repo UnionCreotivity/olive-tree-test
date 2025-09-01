@@ -149,33 +149,52 @@ body {
         background: linear-gradient(
           to right,
           var(--startColor) 0%,
-          var(--midColor) 80%,
           var(--endColor) 100%
         );
-        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        // background: linear-gradient(
+        //   to right,
+        //   var(--startColor) 0%,
+        //   var(--midColor) 80%,
+        //   var(--endColor) 100%
+        // );
+        // mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         mask-composite: xor;
         padding: 0.075em;
         border-radius: 4vmax;
-        animation: gradientShift 3s linear infinite;
+        animation: gradientShift 2s linear infinite;
         // animation: rotate 8s linear infinite;
       }
       @keyframes gradientShift {
         0% {
           --startColor: rgba(101, 122, 92, 1);
-          --midColor: rgba(255, 255, 255, 0);
           --endColor: rgba(178, 191, 148, 1);
         }
         50% {
-          --startColor: rgb(204, 233, 138);
-          --midColor: rgba(101, 122, 92, 1);
-          --endColor: rgb(26, 41, 21);
+          --startColor: rgba(178, 191, 148, 1);
+          --endColor: rgba(101, 122, 92, 1);
         }
         100% {
           --startColor: rgba(101, 122, 92, 1);
-          --midColor: rgba(255, 255, 255, 0);
           --endColor: rgba(178, 191, 148, 1);
         }
       }
+      // @keyframes gradientShift {
+      //   0% {
+      //     --startColor: rgba(101, 122, 92, 1);
+      //     --midColor: rgba(255, 255, 255, 0);
+      //     --endColor: rgba(178, 191, 148, 1);
+      //   }
+      //   50% {
+      //     --startColor: rgb(204, 233, 138);
+      //     --midColor: rgba(101, 122, 92, 1);
+      //     --endColor: rgb(26, 41, 21);
+      //   }
+      //   100% {
+      //     --startColor: rgba(101, 122, 92, 1);
+      //     --midColor: rgba(255, 255, 255, 0);
+      //     --endColor: rgba(178, 191, 148, 1);
+      //   }
+      // }
       @keyframes rotate {
         from {
           transform: rotate(0);
@@ -191,11 +210,13 @@ body {
 
     a {
       display: flex;
+      z-index: 1;
     }
 
     .news-title-fixed {
       font-family: "Cormorant Garamond";
-      color: #000000;
+      color: white;
+      // color: #000000;
       font-weight: 500;
       letter-spacing: 0.1em;
       font-style: italic;
@@ -205,7 +226,8 @@ body {
     .news-title {
       top: 0px;
       font-family: "Noto Serif TC";
-      color: #4f563f;
+      color: white;
+      // color: #4f563f;
       font-weight: bold;
       text-align: center;
       letter-spacing: 0.1em;
@@ -215,7 +237,8 @@ body {
 
     .more {
       font-family: "Cormorant Garamond";
-      color: #000000;
+      color: white;
+      // color: #000000;
       font-weight: 500;
       letter-spacing: 0.1em;
       font-style: italic;
@@ -230,6 +253,9 @@ body {
         background: #9a9a9a;
         margin: 0vw 2.5vw;
         transform: translateY(-0.5vw);
+        @media screen and (max-width: 1024px) {
+          background: white;
+        }
       }
     }
   }
@@ -266,9 +292,7 @@ body {
   z-index: 9999;
   visibility: hidden;
   @media screen and (max-width: 1024px) {
-    width: 100%;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.1);
+    display: none;
   }
   &.active {
     opacity: 1;
